@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Community action to oppose the proposed ICE detention facility in Surprise, Arizona. Get involved, contact officials, and protect our neighborhoods.">
+    <meta property="og:title" content="Stop the ICE Facility in Surprise, AZ">
+    <meta property="og:description" content="A 1,500-bed detention center is planned for our neighborhood - and the city wasn't even consulted. Take action now.">
+    <meta property="og:type" content="website">
+    <title>Stop the ICE Facility in Surprise, AZ | Community Action</title>
+    <!-- GoatCounter - Privacy-friendly analytics (replace YOUR_SITE with your GoatCounter site name after signup) -->
+    <script data-goatcounter="https://YOURSITE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --primary-dark: #0e3a5c;
+            --accent-color: #e74c3c;
+            --accent-hover: #c0392b;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --light-bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+            --text-light: #6c757d;
+            --border-color: #dee2e6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text-color); background: var(--light-bg); }
+        a { color: var(--primary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .logo { font-size: 1.3rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .nav-links a { color: white; font-weight: 500; transition: opacity 0.2s; }
+        .nav-links a:hover { opacity: 0.8; text-decoration: none; }
+        .alert-banner { background: var(--warning-color); color: white; padding: 1rem; text-align: center; font-weight: 500; }
+        .alert-banner strong { display: block; font-size: 1.1rem; }
+        .hero { background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(14, 58, 92, 0.95)); color: white; padding: 4rem 0; text-align: center; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; line-height: 1.2; }
+        .hero .subtitle { font-size: clamp(1.1rem, 2.5vw, 1.4rem); opacity: 0.95; max-width: 800px; margin: 0 auto 2rem; }
+        .hero-stats { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 2rem 0; }
+        .stat-box { background: rgba(255,255,255,0.15); padding: 1.5rem 2rem; border-radius: 10px; min-width: 150px; }
+        .stat-box .number { font-size: 2.5rem; font-weight: bold; display: block; }
+        .stat-box .label { font-size: 0.9rem; opacity: 0.9; }
+        .visitor-counter { background: rgba(255,255,255,0.1); padding: 0.75rem 1.5rem; border-radius: 25px; display: inline-block; margin-top: 1.5rem; font-size: 0.95rem; }
+        .visitor-counter .count { font-weight: bold; font-size: 1.1rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .btn { display: inline-block; padding: 1rem 2rem; border-radius: 5px; font-weight: bold; font-size: 1.1rem; transition: all 0.3s; cursor: pointer; border: none; }
+        .btn-primary { background: var(--accent-color); color: white; }
+        .btn-primary:hover { background: var(--accent-hover); text-decoration: none; transform: translateY(-2px); }
+        .btn-secondary { background: white; color: var(--primary-color); }
+        .btn-secondary:hover { background: var(--light-bg); text-decoration: none; }
+        section { padding: 4rem 0; }
+        section:nth-child(even) { background: white; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem; }
+        .section-title p { color: var(--text-light); font-size: 1.1rem; }
+        .facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .fact-item { background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .fact-item .label { font-size: 0.85rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+        .fact-item .value { font-size: 1.2rem; font-weight: 600; color: var(--text-color); margin-top: 0.3rem; }
+        .fact-item.highlight { border-left-color: var(--accent-color); background: #fef5f5; }
+        .fact-item.highlight .value { color: var(--accent-color); }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); border-radius: 10px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .card h3 { color: var(--primary-color); margin-bottom: 1rem; font-size: 1.3rem; }
+        .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .evidence-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
+        .evidence-header { background: var(--primary-color); color: white; padding: 1rem 1.5rem; font-weight: bold; font-size: 1.1rem; }
+        .evidence-body { padding: 1.5rem; }
+        .evidence-body ul { list-style: none; }
+        .evidence-body li { padding: 0.5rem 0; border-bottom: 1px solid var(--border-color); display: flex; align-items: flex-start; gap: 0.5rem; }
+        .evidence-body li:last-child { border-bottom: none; }
+        .evidence-body li::before { content: "⚠️"; flex-shrink: 0; }
+        .evidence-card.success .evidence-header { background: var(--success-color); }
+        .evidence-card.success li::before { content: "✅"; }
+        .evidence-card.danger .evidence-header { background: var(--accent-color); }
+        .source-link { font-size: 0.85rem; color: var(--text-light); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color); }
+        .source-link a { color: var(--primary-color); }
+        .timeline { max-width: 800px; margin: 0 auto; }
+        .timeline-item { display: flex; gap: 1.5rem; margin-bottom: 2rem; position: relative; }
+        .timeline-marker { width: 50px; height: 50px; background: var(--primary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .timeline-content { flex: 1; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .timeline-content h4 { color: var(--primary-color); margin-bottom: 0.5rem; }
+        .timeline-content ul { margin-left: 1.2rem; margin-top: 0.5rem; }
+        .timeline-content li { margin-bottom: 0.3rem; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .contact-card { background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+        .contact-card h4 { color: var(--primary-color); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--primary-color); }
+        .contact-item { margin-bottom: 0.8rem; }
+        .contact-item .name { font-weight: 600; }
+        .contact-item .role { font-size: 0.85rem; color: var(--text-light); }
+        .letter-template { background: white; border: 2px solid var(--border-color); border-radius: 10px; padding: 2rem; max-width: 800px; margin: 0 auto; position: relative; }
+        .letter-template::before { content: "📧 TEMPLATE"; position: absolute; top: -12px; left: 20px; background: var(--primary-color); color: white; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+        .letter-template h4 { color: var(--primary-color); margin-bottom: 1rem; }
+        .letter-template p { margin-bottom: 1rem; }
+        .letter-template ol { margin: 1rem 0 1rem 1.5rem; }
+        .letter-template li { margin-bottom: 0.5rem; }
+        .copy-btn { background: var(--primary-color); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 5px; cursor: pointer; font-size: 1rem; margin-top: 1rem; transition: background 0.3s; }
+        .copy-btn:hover { background: var(--primary-dark); }
+        .sources-section { background: var(--light-bg); }
+        .source-list { max-width: 900px; margin: 0 auto; }
+        .source-category { margin-bottom: 2rem; }
+        .source-category h3 { color: var(--primary-color); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border-color); }
+        .source-item { background: white; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 0.75rem; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+        .source-item .source-title { font-weight: 600; margin-bottom: 0.25rem; }
+        .source-item .source-outlet { font-size: 0.9rem; color: var(--text-light); }
+        .source-item a { word-break: break-all; }
+        footer { background: var(--primary-dark); color: white; padding: 3rem 0 1.5rem; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h4 { margin-bottom: 1rem; font-size: 1.1rem; }
+        .footer-section a { color: rgba(255,255,255,0.8); display: block; margin-bottom: 0.5rem; }
+        .footer-section a:hover { color: white; }
+        .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; opacity: 0.8; }
+        .footer-counter { margin-top: 1rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 20px; display: inline-block; }
+        @media (max-width: 768px) {
+            .nav-links { width: 100%; justify-content: center; }
+            .hero { padding: 2.5rem 0; }
+            .stat-box { min-width: 120px; padding: 1rem 1.5rem; }
+            .stat-box .number { font-size: 2rem; }
+            section { padding: 2.5rem 0; }
+            .timeline-item { flex-direction: column; gap: 1rem; }
+            .timeline-marker { width: 40px; height: 40px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="container">
+        <div class="logo">🛑 No ICE in Surprise</div>
+        <div class="nav-links">
+            <a href="#facts">The Facts</a>
+            <a href="#action">Take Action</a>
+            <a href="#evidence">Evidence</a>
+            <a href="#contact">Contact Officials</a>
+            <a href="#sources">Sources</a>
+        </div>
+    </nav>
+</header>
+<div class="alert-banner">
+    <strong>🗓️ NEXT CITY COUNCIL MEETING: Tuesday, February 4, 2026 at 6:00 PM</strong>
+    Submit a "Call to the Public" form to speak. Your voice matters!
+</div>
+<section class="hero">
+    <div class="container">
+        <h1>Stop the ICE Detention Facility in Surprise</h1>
+        <p class="subtitle">The federal government just purchased a massive warehouse in our community to build a 1,500-bed detention center. <strong>The City of Surprise was never consulted.</strong> Our families, our schools, and our neighborhoods deserve a voice.</p>
+        <div class="hero-stats">
+            <div class="stat-box"><span class="number">1,500</span><span class="label">Detention Beds Planned</span></div>
+            <div class="stat-box"><span class="number">$70M</span><span class="label">Paid in Cash</span></div>
+            <div class="stat-box"><span class="number">0</span><span class="label">Community Input</span></div>
+        </div>
+        <div class="visitor-counter">
+            👁️ <span class="count" id="visitor-count">---</span> people have viewed this page
+        </div>
+        <div class="cta-buttons">
+            <a href="#action" class="btn btn-primary">Take Action Now</a>
+            <a href="#contact" class="btn btn-secondary">Contact Officials</a>
+        </div>
+    </div>
+</section>
+<section id="facts">
+    <div class="container">
+        <div class="section-title"><h2>What We Know</h2><p>The facts about the proposed ICE facility in our community</p></div>
+        <div class="facts-grid">
+            <div class="fact-item"><div class="label">Location</div><div class="value">13290 W Sweetwater Avenue</div></div>
+            <div class="fact-item"><div class="label">Building Size</div><div class="value">418,400 sq ft on 24 acres</div></div>
+            <div class="fact-item"><div class="label">Purchase Price</div><div class="value">$70,000,000 (cash)</div></div>
+            <div class="fact-item"><div class="label">Purchase Date</div><div class="value">January 23, 2026</div></div>
+            <div class="fact-item"><div class="label">Planned Capacity</div><div class="value">1,500 beds</div></div>
+            <div class="fact-item highlight"><div class="label">City Notification</div><div class="value">NONE - Not Consulted</div></div>
+        </div>
+        <div style="margin-top: 2rem;">
+            <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary-color);">Nearby Sensitive Locations</h3>
+            <div class="card-grid">
+                <div class="card"><div class="card-icon">🏫</div><h3>Legacy Traditional School</h3><p><strong>On the SAME STREET</strong> — 14506 W Sweetwater Ave. K-8 school with 1,868 students just blocks away.</p></div>
+                <div class="card"><div class="card-icon">🏘️</div><h3>Marley Park Community</h3><p>5,000+ residents with an average age of 36. Young families with children who chose this area for its safety and schools.</p></div>
+                <div class="card"><div class="card-icon">🏡</div><h3>Copper Canyon Ranch</h3><p>2,830 residents in a quiet, gated community known for being family-friendly, peaceful, and safe.</p></div>
+            </div>
+        </div>
+        <p class="source-link" style="text-align: center; margin-top: 2rem;">Sources: <a href="https://www.kjzz.org/politics/2026-01-30/ice-is-planning-a-1-500-bed-processing-facility-in-a-surprise-warehouse-it-just-bought-for-70m" target="_blank">KJZZ</a>, <a href="https://www.azfamily.com/2026/01/29/records-ice-buys-surprise-warehouse-facility-70-million/" target="_blank">AZFamily</a>, <a href="https://www.12news.com/article/news/politics/immigration-news/ice-purchases-warehouse-west-valley-size-of-seven-football-fields/75-9700f4f7-5f83-4d97-b44a-5af1dd13dafe" target="_blank">12News</a></p>
+    </div>
+</section>
+<section id="action">
+    <div class="container">
+        <div class="section-title"><h2>Take Action Now</h2><p>Here's what you can do right now to make your voice heard</p></div>
+        <div class="timeline">
+            <div class="timeline-item"><div class="timeline-marker">1</div><div class="timeline-content"><h4>Contact Mayor Sartor Today</h4><p>Send a letter demanding the city formally oppose this facility. Use our template below.</p><ul><li><strong>Email:</strong> <a href="https://surpriseaz.gov/1177/Contact-the-Mayor" target="_blank">Contact form on city website</a></li><li><strong>Mail:</strong> City of Surprise, Mayor's Office, 16000 N. Civic Center Plaza, Surprise, AZ 85374</li></ul></div></div>
+            <div class="timeline-item"><div class="timeline-marker">2</div><div class="timeline-content"><h4>Speak at the February 4 Council Meeting</h4><p>Register to speak during "Call to the Public" - your 3 minutes on the record matter.</p><ul><li>Submit form at: <a href="https://surpriseaz.portal.civicclerk.com" target="_blank">surpriseaz.portal.civicclerk.com</a></li><li>Meeting starts at 6:00 PM</li></ul></div></div>
+            <div class="timeline-item"><div class="timeline-marker">3</div><div class="timeline-content"><h4>Spread the Word</h4><p>Share this page with neighbors, post on Nextdoor, and organize community meetings.</p><ul><li>Talk to neighbors in Marley Park and Copper Canyon Ranch</li><li>Contact your HOA leadership</li><li>Share on social media with #NoICEinSurprise</li></ul></div></div>
+            <div class="timeline-item"><div class="timeline-marker">4</div><div class="timeline-content"><h4>Contact State & Federal Representatives</h4><p>Demand oversight, hearings, and action from elected officials at all levels.</p><ul><li>State Senator Janae Shamp (District 29)</li><li>U.S. Senator Mark Kelly</li><li>U.S. Senator Ruben Gallego</li></ul></div></div>
+        </div>
+    </div>
+</section>
+<section id="evidence">
+    <div class="container">
+        <div class="section-title"><h2>What Happens to Communities with ICE Facilities</h2><p>Documented impacts from other cities — with sources</p></div>
+        <div class="card-grid">
+            <div class="evidence-card"><div class="evidence-header">📍 Minneapolis, MN — January 2026</div><div class="evidence-body"><ul><li>Police worked 3,000+ hours overtime in 4 days — cost: $2-3 million to taxpayers</li><li>Businesses reported 50-80% revenue decreases</li><li>Schools forced into lockdown to protect students</li><li>State and cities filed federal lawsuit citing "chaos" and constitutional violations</li></ul><p class="source-link">Sources: <a href="https://www.minneapolismn.gov/news/2026/january/ag-lawsuit/" target="_blank">City of Minneapolis</a>, <a href="https://www.cbsnews.com/minnesota/news/minneapolis-police-overtime-immigration-enforcement-surge/" target="_blank">CBS Minnesota</a>, <a href="https://www.ag.state.mn.us/Office/Communications/2026/01/12_ICE.asp" target="_blank">MN Attorney General</a></p></div></div>
+            <div class="evidence-card success"><div class="evidence-header">✅ Oklahoma City — January 2026 (SUCCESS)</div><div class="evidence-body"><ul><li>Proposed 1,500-bed facility CANCELLED after community opposition</li><li>Hours of public testimony at city council meeting</li><li>Property owners withdrew after pressure from residents</li><li>Mayor Holt: "I commend the owners for their decision"</li></ul><p class="source-link">Sources: <a href="https://www.koco.com/article/oklahoma-city-ice-detention-center-halted-community-opposition/70194624" target="_blank">KOCO News</a>, <a href="https://www.kgou.org/2026-01-29/okc-warehouse-no-longer-being-considered-for-ice-detention-center" target="_blank">KGOU (NPR)</a>, <a href="https://www.news9.com/oklahoma-city-news/dhs-ice-no-longer-seeking-okc-facility-proposed-detention-center-mayor-holt" target="_blank">News9</a></p></div></div>
+            <div class="evidence-card"><div class="evidence-header">📍 Hanover County, VA — January 2026</div><div class="evidence-body"><ul><li>Board of Supervisors formally opposed ICE facility</li><li>Estimated $1+ million annual reduction in tax revenue</li><li>"Unplanned demands on public services, including public safety"</li><li>Property owner withdrew from sale after community opposition</li></ul><p class="source-link">Sources: <a href="https://www.wvtf.org/news/2026-01-28/hanover-county-officials-push-back-on-proposed-ice-facility" target="_blank">WVTF (NPR)</a>, <a href="https://www.12onyourside.com/2026/01/29/hanover-county-board-opposes-ice-facility-near-lakeridge-parkway/" target="_blank">NBC12</a>, <a href="https://www.wtvr.com/news/local-news/canadian-developer-will-not-sell-hanover-builing-to-ice-jan-30-2026" target="_blank">CBS6 Richmond</a></p></div></div>
+            <div class="evidence-card danger"><div class="evidence-header">⚠️ Eloy, AZ — Arizona's Existing ICE Facility</div><div class="evidence-body"><ul><li>Called "deadliest immigration detention center in the U.S." by Rep. Raúl Grijalva</li><li>16+ deaths including 5 suicides since opening</li><li>9% of ALL detention facility deaths nationwide (just 1 of 250+ facilities)</li><li>53 complaints filed in 2 years for medical neglect, abuse, excessive segregation</li></ul><p class="source-link">Sources: <a href="https://www.detentionwatchnetwork.org/pressroom/releases/2024/new-report-compiles-decades-abuse-notorious-ice-detention-center-arizona" target="_blank">Detention Watch Network</a>, <a href="https://en.wikipedia.org/wiki/Eloy_Detention_Center" target="_blank">Wikipedia</a>, <a href="https://www.npr.org/transcripts/nx-s1-5538090" target="_blank">NPR</a></p></div></div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <div class="container">
+        <div class="section-title"><h2>Contact Your Representatives</h2><p>Make your voice heard at every level of government</p></div>
+        <div class="contact-grid">
+            <div class="contact-card"><h4>🏛️ City of Surprise</h4><div class="contact-item"><div class="name">Mayor Kevin Sartor</div><div class="role">Primary target — took office January 2026</div><a href="https://surpriseaz.gov/1177/Contact-the-Mayor" target="_blank">Contact Form →</a></div><div class="contact-item"><div class="name">City Council</div><div class="role">Request formal opposition resolution</div><a href="https://surpriseaz.gov/732/City-Council" target="_blank">Council Info →</a></div></div>
+            <div class="contact-card"><h4>🏛️ Arizona State Legislature</h4><div class="contact-item"><div class="name">Senator Janae Shamp (R)</div><div class="role">State Senate District 29</div></div><div class="contact-item"><div class="name">Rep. Steve Montenegro (R)</div><div class="role">State House District 29</div></div><div class="contact-item"><div class="name">Rep. Austin Smith (R)</div><div class="role">State House District 29</div></div><a href="https://www.azleg.gov/findmylegislator/" target="_blank">Find Your Legislator →</a></div>
+            <div class="contact-card"><h4>🏛️ U.S. Congress</h4><div class="contact-item"><div class="name">Senator Mark Kelly (D)</div><a href="https://www.kelly.senate.gov/contact/" target="_blank">Contact →</a></div><div class="contact-item"><div class="name">Senator Ruben Gallego (D)</div><div class="role">Strong on immigration — newly elected</div><a href="https://www.gallego.senate.gov/contact/" target="_blank">Contact →</a></div><div class="contact-item"><div class="name">Rep. Paul Gosar (R)</div><div class="role">AZ-9 Congressional District</div><a href="https://gosar.house.gov/contact/" target="_blank">Contact →</a></div></div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="section-title"><h2>Letter Template</h2><p>Copy this template and send it to Mayor Sartor and City Council</p></div>
+        <div class="letter-template" id="letter-text">
+            <h4>Subject: Demand City Opposition to ICE Detention Facility at Sweetwater Ave</h4>
+            <p>Mayor Sartor and Surprise City Council,</p>
+            <p>I am a resident of Surprise writing to express my strong opposition to the Department of Homeland Security's plan to convert the recently purchased warehouse at 13290 W Sweetwater Avenue into a 1,500-bed ICE detention facility.</p>
+            <p>According to news reports, the City of Surprise was not contacted by DHS or any other federal agency before this purchase was made. This is unacceptable. Residents who will live near this facility — including families in Marley Park, Copper Canyon Ranch, and children attending Legacy Traditional School on the same street — deserve a voice in decisions that will fundamentally change our community.</p>
+            <p>I am calling on you to:</p>
+            <ol><li>Formally oppose this facility in an official city resolution, as Hanover County, Virginia did this week</li><li>Demand answers from DHS about infrastructure impact, emergency services demands, and operational plans</li><li>Commission an impact study on property values, traffic, and public safety costs</li><li>Engage our state and federal representatives to seek alternative sites or halt this project</li><li>Hold a public hearing where residents can voice their concerns</li></ol>
+            <p>During your campaign, you promised that "every citizen's voice is heard, respected, and protected." This is that moment. Our community was not consulted. We are consulting you now.</p>
+            <p>Please take action.</p>
+            <p><em>[Your name, address, phone, email]</em></p>
+            <button class="copy-btn" onclick="copyLetter()">📋 Copy Letter to Clipboard</button>
+        </div>
+    </div>
+</section>
+<section id="sources" class="sources-section">
+    <div class="container">
+        <div class="section-title"><h2>Sources & Documentation</h2><p>All claims on this site are backed by credible news sources</p></div>
+        <div class="source-list">
+            <div class="source-category"><h3>Surprise, Arizona Facility</h3>
+                <div class="source-item"><div class="source-title">ICE is planning a 1,500-bed processing facility in Surprise</div><div class="source-outlet">KJZZ (NPR Arizona) — January 30, 2026</div><a href="https://www.kjzz.org/politics/2026-01-30/ice-is-planning-a-1-500-bed-processing-facility-in-a-surprise-warehouse-it-just-bought-for-70m" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Records: ICE buys Surprise warehouse facility for $70 million</div><div class="source-outlet">AZFamily / Arizona's Family — January 29, 2026</div><a href="https://www.azfamily.com/2026/01/29/records-ice-buys-surprise-warehouse-facility-70-million/" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">ICE purchases warehouse in West Valley the size of 7 football fields</div><div class="source-outlet">12News (NBC) — January 29, 2026</div><a href="https://www.12news.com/article/news/politics/immigration-news/ice-purchases-warehouse-west-valley-size-of-seven-football-fields/75-9700f4f7-5f83-4d97-b44a-5af1dd13dafe" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">ICE eyes warehouses for its mass detention network</div><div class="source-outlet">The Washington Post — January 30, 2026</div><a href="https://www.washingtonpost.com/investigations/2026/01/30/ice-warehouse-detention-dhs-immigration/" target="_blank">Read Article →</a></div>
+            </div>
+            <div class="source-category"><h3>Minneapolis Police Costs & Impact</h3>
+                <div class="source-item"><div class="source-title">Minneapolis police racked up millions in overtime in less than 2 weeks</div><div class="source-outlet">CBS Minnesota — January 28, 2026</div><a href="https://www.cbsnews.com/minnesota/news/minneapolis-police-overtime-immigration-enforcement-surge/" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">MN Attorney General, Minneapolis and Saint Paul sue to halt ICE surge</div><div class="source-outlet">City of Minneapolis Official Website — January 12, 2026</div><a href="https://www.minneapolismn.gov/news/2026/january/ag-lawsuit/" target="_blank">Read Article →</a></div>
+            </div>
+            <div class="source-category"><h3>Oklahoma City Cancellation</h3>
+                <div class="source-item"><div class="source-title">Oklahoma City ICE detention center proposal halted after community opposition</div><div class="source-outlet">KOCO News 5 (ABC) — January 30, 2026</div><a href="https://www.koco.com/article/oklahoma-city-ice-detention-center-halted-community-opposition/70194624" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Oklahoma City warehouse won't become ICE detention center</div><div class="source-outlet">KGOU (NPR Oklahoma) — January 29, 2026</div><a href="https://www.kgou.org/2026-01-29/okc-warehouse-no-longer-being-considered-for-ice-detention-center" target="_blank">Read Article →</a></div>
+            </div>
+            <div class="source-category"><h3>Hanover County, Virginia Opposition</h3>
+                <div class="source-item"><div class="source-title">Hanover County officials push back on proposed ICE facility</div><div class="source-outlet">WVTF (NPR Virginia) — January 28, 2026</div><a href="https://www.wvtf.org/news/2026-01-28/hanover-county-officials-push-back-on-proposed-ice-facility" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Company withdraws plan to sell Hanover building to DHS</div><div class="source-outlet">NBC12 Richmond — January 30, 2026</div><a href="https://www.12onyourside.com/2026/01/30/company-withdraws-plan-sell-building-dhs-ice-facility/" target="_blank">Read Article →</a></div>
+            </div>
+            <div class="source-category"><h3>Eloy Detention Center (Arizona)</h3>
+                <div class="source-item"><div class="source-title">New Report Compiles Decades of Abuse at Eloy Detention Center</div><div class="source-outlet">Detention Watch Network — November 6, 2024</div><a href="https://www.detentionwatchnetwork.org/pressroom/releases/2024/new-report-compiles-decades-abuse-notorious-ice-detention-center-arizona" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">It's the deadliest year for people in ICE custody in decades</div><div class="source-outlet">NPR — October 23, 2025</div><a href="https://www.npr.org/transcripts/nx-s1-5538090" target="_blank">Read Article →</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="section-title"><h2>Resources & Organizations</h2><p>Connect with groups fighting for community rights</p></div>
+        <div class="card-grid">
+            <div class="card"><h3>ACLU of Arizona</h3><p>Legal resources and community organizing support for fighting detention facilities.</p><a href="https://www.acluaz.org" target="_blank">acluaz.org →</a></div>
+            <div class="card"><h3>Florence Immigrant & Refugee Rights Project</h3><p>Arizona-based experts who have fought Eloy facility conditions for years.</p><a href="https://firrp.org" target="_blank">firrp.org →</a></div>
+            <div class="card"><h3>Detention Watch Network</h3><p>National coordination and #CommunitiesNotCages campaign resources.</p><a href="https://www.detentionwatchnetwork.org" target="_blank">detentionwatchnetwork.org →</a></div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h4>Quick Links</h4><a href="#facts">The Facts</a><a href="#action">Take Action</a><a href="#evidence">Evidence</a><a href="#sources">Sources</a></div>
+            <div class="footer-section"><h4>Key Dates</h4><p><strong>Feb 4, 2026:</strong> City Council Meeting</p><p><strong>Feb 18, 2026:</strong> City Council Meeting</p><p>Meetings are 1st & 3rd Tuesdays at 6 PM</p></div>
+            <div class="footer-section"><h4>Share This Page</h4><p>Use hashtag: <strong>#NoICEinSurprise</strong></p><p>Post on Nextdoor, Facebook, and local community groups</p></div>
+        </div>
+        <div class="footer-bottom">
+            <p>Created by concerned Surprise residents. Last updated: January 31, 2026</p>
+            <p>The city wasn't consulted. That doesn't mean we have to be silent.</p>
+            <div class="footer-counter">
+                👁️ Total visitors: <span id="footer-visitor-count">---</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+// Visitor counter using CountAPI (free, no signup required)
+// This creates a unique counter for your site
+const counterNamespace = 'noice-surprise'; // Change this to your site name
+const counterKey = 'visits';
+
+// Increment and get count
+fetch(`https://api.countapi.xyz/hit/${counterNamespace}/${counterKey}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('visitor-count').textContent = data.value.toLocaleString();
+        document.getElementById('footer-visitor-count').textContent = data.value.toLocaleString();
+    })
+    .catch(err => {
+        // Fallback if CountAPI is down
+        document.getElementById('visitor-count').textContent = '---';
+        document.getElementById('footer-visitor-count').textContent = '---';
+    });
+
+function copyLetter() {
+    const letterText = `Subject: Demand City Opposition to ICE Detention Facility at Sweetwater Ave
+
+Mayor Sartor and Surprise City Council,
+
+I am a resident of Surprise writing to express my strong opposition to the Department of Homeland Security's plan to convert the recently purchased warehouse at 13290 W Sweetwater Avenue into a 1,500-bed ICE detention facility.
+
+According to news reports, the City of Surprise was not contacted by DHS or any other federal agency before this purchase was made. This is unacceptable. Residents who will live near this facility — including families in Marley Park, Copper Canyon Ranch, and children attending Legacy Traditional School on the same street — deserve a voice in decisions that will fundamentally change our community.
+
+I am calling on you to:
+
+1. Formally oppose this facility in an official city resolution, as Hanover County, Virginia did this week
+2. Demand answers from DHS about infrastructure impact, emergency services demands, and operational plans
+3. Commission an impact study on property values, traffic, and public safety costs
+4. Engage our state and federal representatives to seek alternative sites or halt this project
+5. Hold a public hearing where residents can voice their concerns
+
+During your campaign, you promised that "every citizen's voice is heard, respected, and protected." This is that moment. Our community was not consulted. We are consulting you now.
+
+Please take action.
+
+[Your name, address, phone, email]`;
+    navigator.clipboard.writeText(letterText).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.textContent = '✅ Copied!';
+        setTimeout(() => { btn.textContent = '📋 Copy Letter to Clipboard'; }, 2000);
+    });
+}
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+</script>
+</body>
+</html>
