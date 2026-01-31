@@ -8,8 +8,16 @@
     <meta property="og:description" content="A 1,500-bed detention center is planned for our neighborhood - and the city wasn't even consulted. Take action now.">
     <meta property="og:type" content="website">
     <title>Stop the ICE Facility in Surprise, AZ | Community Action</title>
-    <!-- GoatCounter - Privacy-friendly analytics (replace YOUR_SITE with your GoatCounter site name after signup) -->
-    <script data-goatcounter="https://YOURSITE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXWR1L4GY4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RXWR1L4GY4');
+    </script>
+    
     <style>
         :root {
             --primary-color: #1a5276;
@@ -44,8 +52,6 @@
         .stat-box { background: rgba(255,255,255,0.15); padding: 1.5rem 2rem; border-radius: 10px; min-width: 150px; }
         .stat-box .number { font-size: 2.5rem; font-weight: bold; display: block; }
         .stat-box .label { font-size: 0.9rem; opacity: 0.9; }
-        .visitor-counter { background: rgba(255,255,255,0.1); padding: 0.75rem 1.5rem; border-radius: 25px; display: inline-block; margin-top: 1.5rem; font-size: 0.95rem; }
-        .visitor-counter .count { font-weight: bold; font-size: 1.1rem; }
         .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
         .btn { display: inline-block; padding: 1rem 2rem; border-radius: 5px; font-weight: bold; font-size: 1.1rem; transition: all 0.3s; cursor: pointer; border: none; }
         .btn-primary { background: var(--accent-color); color: white; }
@@ -115,7 +121,6 @@
         .footer-section a { color: rgba(255,255,255,0.8); display: block; margin-bottom: 0.5rem; }
         .footer-section a:hover { color: white; }
         .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; opacity: 0.8; }
-        .footer-counter { margin-top: 1rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.1); border-radius: 20px; display: inline-block; }
         @media (max-width: 768px) {
             .nav-links { width: 100%; justify-content: center; }
             .hero { padding: 2.5rem 0; }
@@ -152,9 +157,6 @@
             <div class="stat-box"><span class="number">1,500</span><span class="label">Detention Beds Planned</span></div>
             <div class="stat-box"><span class="number">$70M</span><span class="label">Paid in Cash</span></div>
             <div class="stat-box"><span class="number">0</span><span class="label">Community Input</span></div>
-        </div>
-        <div class="visitor-counter">
-            👁️ <span class="count" id="visitor-count">---</span> people have viewed this page
         </div>
         <div class="cta-buttons">
             <a href="#action" class="btn btn-primary">Take Action Now</a>
@@ -246,6 +248,7 @@
             <div class="source-category"><h3>Minneapolis Police Costs & Impact</h3>
                 <div class="source-item"><div class="source-title">Minneapolis police racked up millions in overtime in less than 2 weeks</div><div class="source-outlet">CBS Minnesota — January 28, 2026</div><a href="https://www.cbsnews.com/minnesota/news/minneapolis-police-overtime-immigration-enforcement-surge/" target="_blank">Read Article →</a></div>
                 <div class="source-item"><div class="source-title">MN Attorney General, Minneapolis and Saint Paul sue to halt ICE surge</div><div class="source-outlet">City of Minneapolis Official Website — January 12, 2026</div><a href="https://www.minneapolismn.gov/news/2026/january/ag-lawsuit/" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Attorney General Ellison and cities sue to halt ICE surge</div><div class="source-outlet">Minnesota Attorney General — January 12, 2026</div><a href="https://www.ag.state.mn.us/Office/Communications/2026/01/12_ICE.asp" target="_blank">Read Article →</a></div>
             </div>
             <div class="source-category"><h3>Oklahoma City Cancellation</h3>
                 <div class="source-item"><div class="source-title">Oklahoma City ICE detention center proposal halted after community opposition</div><div class="source-outlet">KOCO News 5 (ABC) — January 30, 2026</div><a href="https://www.koco.com/article/oklahoma-city-ice-detention-center-halted-community-opposition/70194624" target="_blank">Read Article →</a></div>
@@ -258,6 +261,7 @@
             <div class="source-category"><h3>Eloy Detention Center (Arizona)</h3>
                 <div class="source-item"><div class="source-title">New Report Compiles Decades of Abuse at Eloy Detention Center</div><div class="source-outlet">Detention Watch Network — November 6, 2024</div><a href="https://www.detentionwatchnetwork.org/pressroom/releases/2024/new-report-compiles-decades-abuse-notorious-ice-detention-center-arizona" target="_blank">Read Article →</a></div>
                 <div class="source-item"><div class="source-title">It's the deadliest year for people in ICE custody in decades</div><div class="source-outlet">NPR — October 23, 2025</div><a href="https://www.npr.org/transcripts/nx-s1-5538090" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Arizona lawmaker wants to abolish for-profit ICE detention centers</div><div class="source-outlet">Phoenix New Times — January 2026</div><a href="https://www.phoenixnewtimes.com/news/arizona-lawmaker-wants-to-abolish-for-profit-ice-detention-centers-40636239/" target="_blank">Read Article →</a></div>
             </div>
         </div>
     </div>
@@ -279,34 +283,10 @@
             <div class="footer-section"><h4>Key Dates</h4><p><strong>Feb 4, 2026:</strong> City Council Meeting</p><p><strong>Feb 18, 2026:</strong> City Council Meeting</p><p>Meetings are 1st & 3rd Tuesdays at 6 PM</p></div>
             <div class="footer-section"><h4>Share This Page</h4><p>Use hashtag: <strong>#NoICEinSurprise</strong></p><p>Post on Nextdoor, Facebook, and local community groups</p></div>
         </div>
-        <div class="footer-bottom">
-            <p>Created by concerned Surprise residents. Last updated: January 31, 2026</p>
-            <p>The city wasn't consulted. That doesn't mean we have to be silent.</p>
-            <div class="footer-counter">
-                👁️ Total visitors: <span id="footer-visitor-count">---</span>
-            </div>
-        </div>
+        <div class="footer-bottom"><p>Created by concerned Surprise residents. Last updated: January 31, 2026</p><p>The city wasn't consulted. That doesn't mean we have to be silent.</p></div>
     </div>
 </footer>
 <script>
-// Visitor counter using CountAPI (free, no signup required)
-// This creates a unique counter for your site
-const counterNamespace = 'noice-surprise'; // Change this to your site name
-const counterKey = 'visits';
-
-// Increment and get count
-fetch(`https://api.countapi.xyz/hit/${counterNamespace}/${counterKey}`)
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('visitor-count').textContent = data.value.toLocaleString();
-        document.getElementById('footer-visitor-count').textContent = data.value.toLocaleString();
-    })
-    .catch(err => {
-        // Fallback if CountAPI is down
-        document.getElementById('visitor-count').textContent = '---';
-        document.getElementById('footer-visitor-count').textContent = '---';
-    });
-
 function copyLetter() {
     const letterText = `Subject: Demand City Opposition to ICE Detention Facility at Sweetwater Ave
 
