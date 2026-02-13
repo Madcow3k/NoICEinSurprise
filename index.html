@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Community action to oppose the proposed ICE detention facility in Surprise, Arizona. Get involved, contact officials, and protect our neighborhoods.">
     <meta property="og:title" content="Stop the ICE Facility in Surprise, AZ">
-    <meta property="og:description" content="Over 1,000 residents spoke out against the facility on February 3rd. Keep the pressure on!">
+    <meta property="og:description" content="A 1,500-bed detention center is planned for our neighborhood - and the city wasn't even consulted. Take action now.">
     <meta property="og:type" content="website">
     <title>Stop the ICE Facility in Surprise, AZ | Community Action</title>
+    
+    <!-- Favicon - Stop Sign -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='30,7 70,7 93,30 93,70 70,93 30,93 7,70 7,30' fill='%23dc3545' stroke='%23ffffff' stroke-width='4'/%3E%3Ctext x='50' y='70' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle'%3ESTOP%3C/text%3E%3C/svg%3E">
+    
     <style>
         :root {
             --primary-color: #1a5276;
@@ -16,6 +20,7 @@
             --accent-hover: #c0392b;
             --success-color: #27ae60;
             --warning-color: #f39c12;
+            --urgent-color: #dc3545;
             --light-bg: #f8f9fa;
             --card-bg: #ffffff;
             --text-color: #2c3e50;
@@ -33,16 +38,19 @@
         .nav-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
         .nav-links a { color: white; font-weight: 500; transition: opacity 0.2s; }
         .nav-links a:hover { opacity: 0.8; text-decoration: none; }
-        .alert-banner { background: var(--success-color); color: white; padding: 1rem; text-align: center; font-weight: 500; }
+        .update-notice { background: #17a2b8; color: white; padding: 0.5rem; text-align: center; font-size: 0.9rem; border-bottom: 2px solid #138496; }
+        .alert-banner { background: var(--warning-color); color: white; padding: 1rem; text-align: center; font-weight: 500; }
         .alert-banner strong { display: block; font-size: 1.1rem; }
-        .hero { background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(14, 58, 92, 0.95)); color: white; padding: 4rem 0; text-align: center; }
+        .urgent-banner { background: var(--urgent-color); color: white; padding: 1rem; text-align: center; font-weight: 600; border-bottom: 3px solid #c0392b; }
+        .urgent-banner strong { font-size: 1.2rem; display: block; margin-bottom: 0.3rem; }
+        .hero { background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(14, 58, 92, 0.95)); color: white; padding: 2.5rem 0; text-align: center; }
         .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; line-height: 1.2; }
-        .hero .subtitle { font-size: clamp(1.1rem, 2.5vw, 1.4rem); opacity: 0.95; max-width: 800px; margin: 0 auto 2rem; }
-        .hero-stats { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 2rem 0; }
+        .hero .subtitle { font-size: clamp(1.1rem, 2.5vw, 1.4rem); opacity: 0.95; max-width: 800px; margin: 0 auto 1.5rem; }
+        .hero-stats { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin: 1.5rem 0; }
         .stat-box { background: rgba(255,255,255,0.15); padding: 1.5rem 2rem; border-radius: 10px; min-width: 150px; }
         .stat-box .number { font-size: 2.5rem; font-weight: bold; display: block; }
         .stat-box .label { font-size: 0.9rem; opacity: 0.9; }
-        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
         .btn { display: inline-block; padding: 1rem 2rem; border-radius: 5px; font-weight: bold; font-size: 1.1rem; transition: all 0.3s; cursor: pointer; border: none; }
         .btn-primary { background: var(--accent-color); color: white; }
         .btn-primary:hover { background: var(--accent-hover); text-decoration: none; transform: translateY(-2px); }
@@ -53,18 +61,23 @@
         .section-title { text-align: center; margin-bottom: 3rem; }
         .section-title h2 { font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem; }
         .section-title p { color: var(--text-light); font-size: 1.1rem; }
-        .update-banner { background: var(--success-color); color: white; padding: 2rem; border-radius: 10px; margin-bottom: 2rem; }
-        .update-banner h3 { font-size: 1.8rem; margin-bottom: 1rem; }
-        .update-banner ul { margin-left: 2rem; margin-top: 1rem; }
-        .update-banner li { margin-bottom: 0.5rem; }
+        .victory-banner { background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding: 2rem; border-radius: 10px; border-left: 5px solid var(--success-color); margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .victory-banner h3 { color: var(--success-color); font-size: 1.8rem; margin-bottom: 1rem; }
+        .victory-banner ul { list-style: none; margin-top: 1rem; }
+        .victory-banner li { padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem; font-size: 1.05rem; }
+        .victory-banner li::before { content: "✅"; flex-shrink: 0; font-size: 1.2rem; }
+        .highlight-box { background: #fff3cd; border-left: 5px solid var(--warning-color); padding: 1.5rem; margin: 2rem 0; border-radius: 5px; }
+        .highlight-box.urgent { background: #f8d7da; border-left-color: var(--urgent-color); }
+        .highlight-box.success { background: #d4edda; border-left-color: var(--success-color); }
+        .highlight-box h3 { color: var(--primary-color); margin-bottom: 1rem; }
+        .highlight-box.urgent h3 { color: var(--urgent-color); }
+        .highlight-box.success h3 { color: var(--success-color); }
         .facts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
         .fact-item { background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
         .fact-item .label { font-size: 0.85rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
         .fact-item .value { font-size: 1.2rem; font-weight: 600; color: var(--text-color); margin-top: 0.3rem; }
         .fact-item.highlight { border-left-color: var(--accent-color); background: #fef5f5; }
         .fact-item.highlight .value { color: var(--accent-color); }
-        .fact-item.success { border-left-color: var(--success-color); background: #f0f9f4; }
-        .fact-item.success .value { color: var(--success-color); }
         .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
         .card { background: var(--card-bg); border-radius: 10px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
@@ -80,6 +93,10 @@
         .evidence-card.success .evidence-header { background: var(--success-color); }
         .evidence-card.success li::before { content: "✅"; }
         .evidence-card.danger .evidence-header { background: var(--accent-color); }
+        .evidence-card.legal .evidence-header { background: #6c757d; }
+        .evidence-card.legal li::before { content: "⚖️"; }
+        .evidence-card.city .evidence-header { background: #5a6268; }
+        .evidence-card.city li::before { content: "🏛️"; }
         .source-link { font-size: 0.85rem; color: var(--text-light); margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-color); }
         .source-link a { color: var(--primary-color); }
         .timeline { max-width: 800px; margin: 0 auto; }
@@ -119,7 +136,7 @@
         .footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; opacity: 0.8; }
         @media (max-width: 768px) {
             .nav-links { width: 100%; justify-content: center; }
-            .hero { padding: 2.5rem 0; }
+            .hero { padding: 2rem 0; }
             .stat-box { min-width: 120px; padding: 1rem 1.5rem; }
             .stat-box .number { font-size: 2rem; }
             section { padding: 2.5rem 0; }
@@ -129,22 +146,33 @@
     </style>
 </head>
 <body>
+<div class="update-notice">
+    <strong>🔔 Site Updated: February 12, 2026</strong> - New: Mayor's letter, AG lawsuit threat, Feb 17 deadline
+</div>
+
 <header>
     <nav class="container">
         <div class="logo">🛑 No ICE in Surprise</div>
         <div class="nav-links">
-            <a href="#update">Latest Update</a>
-            <a href="#facts">The Facts</a>
+            <a href="#update">Latest</a>
+            <a href="#facts">Facts</a>
             <a href="#action">Take Action</a>
-            <a href="#contact">Contact Officials</a>
+            <a href="#contact">Contact</a>
             <a href="#sources">Sources</a>
         </div>
     </nav>
 </header>
+
+<div class="urgent-banner">
+    <strong>⚖️ BREAKING: AG Mayes Threatens Lawsuit - Deadline Feb 17th</strong>
+    Attorney General considering legal action to stop facility. City Council voting to travel to DC.
+</div>
+
 <div class="alert-banner">
     <strong>📢 NEXT CITY COUNCIL MEETING: Tuesday, February 18, 2026 at 6:00 PM</strong>
     Over 1,000 residents showed up on Feb 3rd. Let's do it again!
 </div>
+
 <section class="hero">
     <div class="container">
         <h1>Stop the ICE Detention Facility in Surprise</h1>
@@ -160,36 +188,74 @@
         </div>
     </div>
 </section>
+
 <section id="update">
     <div class="container">
-        <div class="update-banner">
+        <div class="victory-banner">
             <h3>✊ Community Victory: February 3rd Meeting</h3>
-            <p><strong>Over 1,000 Surprise residents packed City Hall on February 3rd</strong> in a massive show of opposition to the ICE detention facility. The turnout was unprecedented.</p>
+            <p style="margin-bottom: 1rem;"><strong>Over 1,000 Surprise residents packed City Hall</strong> in an unprecedented show of opposition to the ICE detention facility. The turnout was so massive it generated widespread media coverage and forced both local and federal officials to respond.</p>
             <ul>
                 <li><strong>4-hour public comment period</strong> with the vast majority speaking against the facility</li>
-                <li><strong>Protesters filled chambers AND gathered outside</strong> City Hall</li>
+                <li><strong>Protesters filled chambers AND gathered outside</strong> City Hall - overflow rooms packed</li>
                 <li><strong>Extensive media coverage:</strong> KJZZ, AZFamily, ABC15, Axios Phoenix, Cronkite News, and more</li>
-                <li><strong>Even Rep. Paul Gosar (R)</strong> sent a letter to DHS Secretary demanding transparency and answers</li>
-                <li><strong>Three Democratic representatives</strong> (Stanton, Ansari, Grijalva) also demanded accountability</li>
+                <li><strong>Even Rep. Paul Gosar (R)</strong> sent a letter to DHS Secretary demanding transparency</li>
+                <li><strong>Three Democratic representatives</strong> (Stanton, Ansari, Grijalva) demanded accountability</li>
             </ul>
         </div>
-        <div class="section-title"><h2>What Happened & What's Next</h2><p>The community made its voice heard. Now we keep the pressure on.</p></div>
-        <div class="facts-grid">
-            <div class="fact-item success"><div class="label">Feb 3rd Attendance</div><div class="value">Over 1,000 Residents</div></div>
-            <div class="fact-item success"><div class="label">Public Comment</div><div class="value">4 Hours Long</div></div>
-            <div class="fact-item"><div class="label">Council Response</div><div class="value">"Out of Our Hands"</div></div>
-            <div class="fact-item highlight"><div class="label">Gosar's Deadline</div><div class="value">10 Business Days</div></div>
+        
+        <div class="highlight-box urgent">
+            <h3>🚨 Major Legal & Political Escalation (Feb 10-12)</h3>
+            <p><strong>Attorney General Kris Mayes is considering a "public nuisance" lawsuit to stop the facility.</strong> She sent a formal letter to DHS Secretary Kristi Noem with a <strong>February 17, 2026 deadline</strong> (5 days away) demanding answers before any construction begins.</p>
+            <p style="margin-top: 1rem;"><strong>City Council officially voted Feb 11</strong> to send their own letter and announced a <strong>trip to Washington D.C. March 15-19</strong> to demand face-to-face meetings with federal officials.</p>
+            <p style="margin-top: 1rem;"><strong>U.S. Senators Mark Kelly and Ruben Gallego</strong> sent a joint letter Feb 10 demanding environmental reviews and citing Surprise's rapid growth straining infrastructure.</p>
         </div>
-        <div style="margin-top: 2rem;">
-            <h3 style="text-align: center; margin-bottom: 1.5rem; color: var(--primary-color);">Key Developments</h3>
-            <div class="card-grid">
-                <div class="card"><div class="card-icon">📝</div><h3>Rep. Gosar Demands Answers</h3><p>Even the pro-Trump congressman wrote to DHS Secretary Noem demanding "transparency and coordination." His letter gave DHS 10 business days to respond (deadline around Feb 18-19).</p><p style="margin-top: 1rem;"><strong>Quote:</strong> "Concerns about infrastructure, traffic, emergency services and public safety deserve serious and transparent consideration."</p></div>
-                <div class="card"><div class="card-icon">📢</div><h3>Council Says "We're Powerless"</h3><p>Mayor Sartor and Council Member Judd cited federal supremacy clause, claiming the city has no authority. <strong>But sustained pressure matters.</strong> Other cities have successfully stopped or delayed similar facilities.</p></div>
-                <div class="card"><div class="card-icon">📰</div><h3>National Media Attention</h3><p>The massive turnout generated widespread coverage. Multiple outlets reported on Surprise as a community fighting back. This makes it politically toxic for officials to stay silent.</p></div>
+
+        <div class="card-grid">
+            <div class="evidence-card legal">
+                <div class="evidence-header">⚖️ Attorney General Threatens Lawsuit</div>
+                <div class="evidence-body">
+                    <ul>
+                        <li>AG Mayes considering "public nuisance" law to block facility</li>
+                        <li>Formal letter sent Feb 10 with 10 specific questions</li>
+                        <li><strong>February 17 deadline</strong> for DHS to respond</li>
+                        <li>Questions cover environmental impact, traffic, school safety, medical care</li>
+                        <li>Cited facility 300 yards from homes, 1 mile from 60% Hispanic high school</li>
+                    </ul>
+                    <p class="source-link">Sources: <a href="https://www.kjzz.org/politics/2026-02-10/mayes-considers-nuisance-lawsuit-to-stop-arizona-ice-detention-facility" target="_blank">KJZZ</a>, <a href="https://www.azag.gov/press-release/attorney-general-mayes-demands-answers-dhs-proposed-ice-detention-facility-surprise" target="_blank">AZ Attorney General</a>, <a href="https://www.tucsonsentinel.com/local/report/021126_mayes_ice_surprise/" target="_blank">Tucson Sentinel</a></p>
+                </div>
+            </div>
+
+            <div class="evidence-card city">
+                <div class="evidence-header">🏛️ Mayor Sartor's Letter to DHS (Feb 11)</div>
+                <div class="evidence-body">
+                    <ul>
+                        <li>Council officially voted to send formal letter to DHS Secretary Noem</li>
+                        <li><strong>Announced DC trip March 15-19</strong> to meet federal officials in person</li>
+                        <li>8 detailed questions demanding answers on facility use, zoning, infrastructure</li>
+                        <li>Mayor: "Advance communication and intergovernmental coordination are not merely beneficial—they are essential"</li>
+                        <li>Councilmember Greenberg: <strong>"not one"</strong> supportive letter received</li>
+                    </ul>
+                    <p class="source-link"><strong>Read the full letter:</strong> <a href="Mayor_Sartor_Letter_Feb_11_2026.pdf" target="_blank">Mayor Sartor's Letter (PDF)</a> | Sources: <a href="https://www.yourvalley.net/surprise-independent/stories/surprise-council-plans-trip-to-dc-to-get-ice-answers,661099" target="_blank">Surprise Independent</a>, <a href="https://www.azfamily.com/2026/02/12/surprise-officials-demand-details-clarity-proposed-ice-facility/" target="_blank">AZFamily</a></p>
+                </div>
+            </div>
+
+            <div class="evidence-card">
+                <div class="evidence-header">🏛️ U.S. Senators Demand Answers (Feb 10)</div>
+                <div class="evidence-body">
+                    <ul>
+                        <li>Senators Mark Kelly and Ruben Gallego sent joint letter</li>
+                        <li>Demanded NEPA environmental review before construction</li>
+                        <li>Cited Surprise's 17% population growth since 2020</li>
+                        <li>Concerns about water, utilities, traffic impacts</li>
+                        <li>Warned of nationwide detention expansion without transparency</li>
+                    </ul>
+                    <p class="source-link">Sources: <a href="https://www.kelly.senate.gov/wp-content/uploads/2026/02/2026.02.10-Letter-to-DHS-re-Facility-Acquisition-in-Surprise-Arizona.pdf" target="_blank">Sen. Kelly Letter (PDF)</a>, <a href="https://www.azfamily.com/2026/02/10/arizona-ag-us-senators-demand-answers-proposed-ice-facility-surprise/" target="_blank">AZFamily</a></p>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 <section id="facts">
     <div class="container">
         <div class="section-title"><h2>What We Know</h2><p>The facts about the proposed ICE facility in our community</p></div>
@@ -212,101 +278,146 @@
         <p class="source-link" style="text-align: center; margin-top: 2rem;">Sources: <a href="https://www.kjzz.org/politics/2026-01-30/ice-is-planning-a-1-500-bed-processing-facility-in-a-surprise-warehouse-it-just-bought-for-70m" target="_blank">KJZZ</a>, <a href="https://www.azfamily.com/2026/01/29/records-ice-buys-surprise-warehouse-facility-70-million/" target="_blank">AZFamily</a>, <a href="https://www.12news.com/article/news/politics/immigration-news/ice-purchases-warehouse-west-valley-size-of-seven-football-fields/75-9700f4f7-5f83-4d97-b44a-5af1dd13dafe" target="_blank">12News</a></p>
     </div>
 </section>
+
 <section id="action">
     <div class="container">
         <div class="section-title"><h2>Take Action Now</h2><p>Here's what you can do right now to keep the pressure on</p></div>
         <div class="timeline">
             <div class="timeline-item"><div class="timeline-marker">1</div><div class="timeline-content"><h4>Attend the February 18 Council Meeting</h4><p><strong>This is critical.</strong> We showed massive turnout on Feb 3. We need to do it again to show sustained community opposition.</p><ul><li><strong>Date:</strong> Tuesday, February 18, 2026 at 6:00 PM</li><li><strong>Location:</strong> Surprise City Hall, 16000 N. Civic Center Plaza</li><li><strong>Action:</strong> Submit "Call to the Public" form at <a href="https://surpriseaz.portal.civicclerk.com" target="_blank">surpriseaz.portal.civicclerk.com</a></li></ul></div></div>
-            <div class="timeline-item"><div class="timeline-marker">2</div><div class="timeline-content"><h4>Contact Rep. Paul Gosar - He's Asking Questions</h4><p>Gosar gave DHS 10 days to respond to his transparency demands (deadline around Feb 18-19). <strong>Thank him for asking questions</strong> and urge him to keep up the pressure.</p><ul><li><strong>Contact:</strong> <a href="https://gosar.house.gov/contact/" target="_blank">gosar.house.gov/contact/</a></li><li><strong>Message:</strong> Thank him for his Feb 5 letter to DHS and ask him to demand a public meeting before any facility opens</li></ul></div></div>
-            <div class="timeline-item"><div class="timeline-marker">3</div><div class="timeline-content"><h4>Demand City Pass a Resolution</h4><p>Even if the city can't stop the facility, they can formally oppose it - like Hanover County did. Send letters to Mayor Sartor and all council members.</p><ul><li><strong>Email:</strong> <a href="https://surpriseaz.gov/1177/Contact-the-Mayor" target="_blank">Contact form on city website</a></li><li><strong>Mail:</strong> City of Surprise, Mayor's Office, 16000 N. Civic Center Plaza, Surprise, AZ 85374</li><li><strong>Use template below</strong></li></ul></div></div>
-            <div class="timeline-item"><div class="timeline-marker">4</div><div class="timeline-content"><h4>Contact Democratic Representatives</h4><p>Reps. Stanton, Ansari, and Grijalva also sent a letter demanding answers. Contact them to show constituent support.</p><ul><li>Rep. Greg Stanton</li><li>Rep. Yassamin Ansari</li><li>Rep. Adelita Grijalva</li></ul></div></div>
-            <div class="timeline-item"><div class="timeline-marker">5</div><div class="timeline-content"><h4>Keep Organizing</h4><p>Share this page with neighbors, post on Nextdoor, and keep the momentum going.</p><ul><li>Talk to neighbors in Marley Park and Copper Canyon Ranch</li><li>Contact your HOA leadership</li><li>Share on social media with #NoICEinSurprise</li><li>Recruit 5 people to attend the Feb 18 meeting</li></ul></div></div>
+            
+            <div class="timeline-item"><div class="timeline-marker">2</div><div class="timeline-content"><h4>Watch Feb 17 AG Deadline</h4><p>Attorney General Mayes gave DHS until <strong>February 17, 2026</strong> to answer her questions. If they don't respond, she may file a lawsuit.</p><ul><li>Monitor news coverage for DHS response</li><li>Share updates on social media #NoICEinSurprise</li><li>Contact AG Mayes to thank her for taking action</li></ul></div></div>
+
+            <div class="timeline-item"><div class="timeline-marker">3</div><div class="timeline-content"><h4>Thank Mayor Sartor & City Council</h4><p>The Mayor and Council officially voted to demand answers from DHS and travel to DC. Let them know residents support this action.</p><ul><li>Send thank you emails via <a href="https://surpriseaz.gov/1177/Contact-the-Mayor" target="_blank">city contact form</a></li><li>Ask them to pass a formal opposition resolution</li><li>Request they coordinate with AG Mayes</li></ul></div></div>
+
+            <div class="timeline-item"><div class="timeline-marker">4</div><div class="timeline-content"><h4>Contact Rep. Gosar - He's Asking Questions</h4><p>Gosar gave DHS 10 days to respond (deadline around Feb 18-19). <strong>Thank him for asking questions</strong> and urge him to keep up the pressure.</p><ul><li><strong>Contact:</strong> <a href="https://gosar.house.gov/contact/" target="_blank">gosar.house.gov/contact/</a></li><li><strong>Message:</strong> Thank him and ask him to demand a public meeting before any facility opens</li></ul></div></div>
+
+            <div class="timeline-item"><div class="timeline-marker">5</div><div class="timeline-content"><h4>Contact U.S. Senators</h4><p>Senators Kelly and Gallego sent a strong letter demanding environmental review. Show them constituent support.</p><ul><li>Sen. Mark Kelly: <a href="https://www.kelly.senate.gov/contact/" target="_blank">kelly.senate.gov/contact/</a></li><li>Sen. Ruben Gallego: <a href="https://www.gallego.senate.gov/contact/" target="_blank">gallego.senate.gov/contact/</a></li></ul></div></div>
+
+            <div class="timeline-item"><div class="timeline-marker">6</div><div class="timeline-content"><h4>Keep Organizing</h4><p>Share this page with neighbors, post on Nextdoor, and keep the momentum going.</p><ul><li>Talk to neighbors in Marley Park and Copper Canyon Ranch</li><li>Contact your HOA leadership</li><li>Share on social media with #NoICEinSurprise</li><li>Recruit 5 people to attend the Feb 18 meeting</li></ul></div></div>
         </div>
     </div>
 </section>
+
 <section id="evidence">
     <div class="container">
         <div class="section-title"><h2>What Happens to Communities with ICE Facilities</h2><p>Documented impacts from other cities — with sources</p></div>
         <div class="card-grid">
             <div class="evidence-card"><div class="evidence-header">📍 Minneapolis, MN — January 2026</div><div class="evidence-body"><ul><li>Police worked 3,000+ hours overtime in 4 days — cost: $2-3 million to taxpayers</li><li>Businesses reported 50-80% revenue decreases</li><li>Schools forced into lockdown to protect students</li><li>State and cities filed federal lawsuit citing "chaos" and constitutional violations</li></ul><p class="source-link">Sources: <a href="https://www.minneapolismn.gov/news/2026/january/ag-lawsuit/" target="_blank">City of Minneapolis</a>, <a href="https://www.cbsnews.com/minnesota/news/minneapolis-police-overtime-immigration-enforcement-surge/" target="_blank">CBS Minnesota</a>, <a href="https://www.ag.state.mn.us/Office/Communications/2026/01/12_ICE.asp" target="_blank">MN Attorney General</a></p></div></div>
+            
             <div class="evidence-card success"><div class="evidence-header">✅ Oklahoma City — January 2026 (SUCCESS)</div><div class="evidence-body"><ul><li>Proposed 1,500-bed facility CANCELLED after community opposition</li><li>Hours of public testimony at city council meeting</li><li>Property owners withdrew after pressure from residents</li><li>Mayor Holt: "I commend the owners for their decision"</li></ul><p class="source-link">Sources: <a href="https://www.koco.com/article/oklahoma-city-ice-detention-center-halted-community-opposition/70194624" target="_blank">KOCO News</a>, <a href="https://www.kgou.org/2026-01-29/okc-warehouse-no-longer-being-considered-for-ice-detention-center" target="_blank">KGOU (NPR)</a>, <a href="https://www.news9.com/oklahoma-city-news/dhs-ice-no-longer-seeking-okc-facility-proposed-detention-center-mayor-holt" target="_blank">News9</a></p></div></div>
+            
             <div class="evidence-card"><div class="evidence-header">📍 Hanover County, VA — January 2026</div><div class="evidence-body"><ul><li>Board of Supervisors formally opposed ICE facility</li><li>Estimated $1+ million annual reduction in tax revenue</li><li>"Unplanned demands on public services, including public safety"</li><li>Property owner withdrew from sale after community opposition</li></ul><p class="source-link">Sources: <a href="https://www.wvtf.org/news/2026-01-28/hanover-county-officials-push-back-on-proposed-ice-facility" target="_blank">WVTF (NPR)</a>, <a href="https://www.12onyourside.com/2026/01/29/hanover-county-board-opposes-ice-facility-near-lakeridge-parkway/" target="_blank">NBC12</a>, <a href="https://www.wtvr.com/news/local-news/canadian-developer-will-not-sell-hanover-builing-to-ice-jan-30-2026" target="_blank">CBS6 Richmond</a></p></div></div>
+            
             <div class="evidence-card danger"><div class="evidence-header">⚠️ Eloy, AZ — Arizona's Existing ICE Facility</div><div class="evidence-body"><ul><li>Called "deadliest immigration detention center in the U.S." by Rep. Raúl Grijalva</li><li>16+ deaths including 5 suicides since opening</li><li>9% of ALL detention facility deaths nationwide (just 1 of 250+ facilities)</li><li>53 complaints filed in 2 years for medical neglect, abuse, excessive segregation</li></ul><p class="source-link">Sources: <a href="https://www.detentionwatchnetwork.org/pressroom/releases/2024/new-report-compiles-decades-abuse-notorious-ice-detention-center-arizona" target="_blank">Detention Watch Network</a>, <a href="https://en.wikipedia.org/wiki/Eloy_Detention_Center" target="_blank">Wikipedia</a>, <a href="https://www.npr.org/transcripts/nx-s1-5538090" target="_blank">NPR</a></p></div></div>
         </div>
     </div>
 </section>
+
 <section id="contact">
     <div class="container">
         <div class="section-title"><h2>Contact Your Representatives</h2><p>Make your voice heard at every level of government</p></div>
         <div class="contact-grid">
-            <div class="contact-card"><h4>🏛️ City of Surprise</h4><div class="contact-item"><div class="name">Mayor Kevin Sartor</div><div class="role">Demand formal opposition resolution</div><a href="https://surpriseaz.gov/1177/Contact-the-Mayor" target="_blank">Contact Form →</a></div><div class="contact-item"><div class="name">City Council</div><div class="role">All members need to hear from you</div><a href="https://surpriseaz.gov/732/City-Council" target="_blank">Council Info →</a></div></div>
+            <div class="contact-card"><h4>🏛️ City of Surprise</h4><div class="contact-item"><div class="name">Mayor Kevin Sartor</div><div class="role">Thank him for the DC trip & demand formal opposition</div><a href="https://surpriseaz.gov/1177/Contact-the-Mayor" target="_blank">Contact Form →</a></div><div class="contact-item"><div class="name">City Council</div><div class="role">All members need to hear from you</div><a href="https://surpriseaz.gov/732/City-Council" target="_blank">Council Info →</a></div></div>
+            
+            <div class="contact-card"><h4>⚖️ Arizona Attorney General</h4><div class="contact-item"><div class="name">Kris Mayes</div><div class="role">Considering lawsuit to stop facility</div><a href="https://www.azag.gov/complaints/consumer" target="_blank">Contact AG →</a></div></div>
+
             <div class="contact-card"><h4>🏛️ U.S. Congress</h4><div class="contact-item"><div class="name">Rep. Paul Gosar (R)</div><div class="role">AZ-9 - Asked DHS for transparency</div><a href="https://gosar.house.gov/contact/" target="_blank">Contact →</a></div><div class="contact-item"><div class="name">Sen. Mark Kelly (D)</div><a href="https://www.kelly.senate.gov/contact/" target="_blank">Contact →</a></div><div class="contact-item"><div class="name">Sen. Ruben Gallego (D)</div><div class="role">Strong on immigration — newly elected</div><a href="https://www.gallego.senate.gov/contact/" target="_blank">Contact →</a></div></div>
+            
             <div class="contact-card"><h4>🏛️ Arizona State Legislature</h4><div class="contact-item"><div class="name">Senator Janae Shamp (R)</div><div class="role">State Senate District 29</div></div><div class="contact-item"><div class="name">Rep. Steve Montenegro (R)</div><div class="role">State House District 29</div></div><div class="contact-item"><div class="name">Rep. Austin Smith (R)</div><div class="role">State House District 29</div></div><a href="https://www.azleg.gov/findmylegislator/" target="_blank">Find Your Legislator →</a></div>
         </div>
     </div>
 </section>
+
 <section>
     <div class="container">
-        <div class="section-title"><h2>Letter Template</h2><p>Updated template to demand action after the Feb 3 meeting</p></div>
+        <div class="section-title"><h2>Letter Template</h2><p>Updated template reflecting recent actions</p></div>
         <div class="letter-template" id="letter-text">
-            <h4>Subject: Demand City Pass Formal Opposition Resolution to ICE Facility</h4>
+            <h4>Subject: Support Mayor Sartor's Actions & Demand Formal Opposition Resolution</h4>
             <p>Mayor Sartor and Surprise City Council,</p>
-            <p>I attended (or supported) the February 3rd City Council meeting where over 1,000 residents spoke in opposition to the ICE detention facility at 13290 W Sweetwater Avenue. Our community made its voice clear.</p>
-            <p>While you cite the federal supremacy clause, that does not mean the city must remain silent. <strong>Hanover County, Virginia passed a formal opposition resolution in January 2026.</strong> Rep. Paul Gosar sent a letter to DHS demanding transparency. Even federal representatives recognize this requires local accountability.</p>
+            <p>I want to thank you for listening to the over 1,000 residents who spoke at the February 3rd City Council meeting in opposition to the ICE detention facility at 13290 W Sweetwater Avenue. I appreciate your February 11th letter to DHS Secretary Noem and your decision to travel to Washington D.C. March 15-19 to demand answers.</p>
+            <p>However, sending letters is not enough. <strong>Hanover County, Virginia passed a formal opposition resolution.</strong> Attorney General Kris Mayes is considering a lawsuit. Even Rep. Paul Gosar and Senators Kelly and Gallego are demanding transparency. The city must take a stronger stand.</p>
             <p>I am calling on you to:</p>
-            <ol><li><strong>Pass a formal resolution opposing this facility</strong> and demanding DHS halt operations until community impact is assessed</li><li><strong>Demand a public meeting with DHS officials</strong> before any facility opens</li><li><strong>Commission an independent impact study</strong> on property values, traffic, emergency services, and public safety</li><li><strong>Refuse city cooperation</strong> (utilities, services, permits) until transparency is provided</li><li><strong>Work with state and federal representatives</strong> to seek alternative sites</li></ol>
-            <p>Over 1,000 residents showed up on February 3rd. We will show up again on February 18th. <strong>The city's silence makes you complicit.</strong> Pass a resolution. Stand with your community.</p>
+            <ol>
+                <li><strong>Pass a formal resolution opposing this facility</strong> before your DC trip</li>
+                <li><strong>Coordinate with Attorney General Mayes</strong> and support her legal action</li>
+                <li><strong>Demand a public meeting with DHS officials</strong> upon your return from DC</li>
+                <li><strong>Commission an independent impact study</strong> on property values, traffic, emergency services, and public safety costs</li>
+                <li><strong>Refuse city cooperation</strong> (utilities, services, permits) until full transparency is provided</li>
+            </ol>
+            <p>Your letter to Secretary Noem stated: "advance communication and intergovernmental coordination are not merely beneficial—they are essential." I agree. But DHS ignored this principle when they purchased the facility. Don't let them continue to ignore it now.</p>
+            <p>I will be at the February 18th meeting. Thousands of us will keep showing up until you pass a formal opposition resolution.</p>
             <p>Sincerely,</p>
             <p><em>[Your name, address, phone, email]</em></p>
             <button class="copy-btn" onclick="copyLetter()">📋 Copy Letter to Clipboard</button>
         </div>
     </div>
 </section>
+
 <section id="sources" class="sources-section">
     <div class="container">
         <div class="section-title"><h2>Sources & Documentation</h2><p>All claims on this site are backed by credible news sources</p></div>
         <div class="source-list">
+            <div class="source-category"><h3>Official Letters & Documents</h3>
+                <div class="source-item"><div class="source-title">Mayor Sartor's Letter to DHS Secretary Noem (PDF)</div><div class="source-outlet">City of Surprise — February 11, 2026</div><a href="Mayor_Sartor_Letter_Feb_11_2026.pdf" target="_blank">Download Letter →</a></div>
+                <div class="source-item"><div class="source-title">Senators Kelly & Gallego Letter to DHS (PDF)</div><div class="source-outlet">U.S. Senate — February 10, 2026</div><a href="https://www.kelly.senate.gov/wp-content/uploads/2026/02/2026.02.10-Letter-to-DHS-re-Facility-Acquisition-in-Surprise-Arizona.pdf" target="_blank">Download Letter →</a></div>
+            </div>
+
+            <div class="source-category"><h3>Attorney General & Legal Action (Feb 10-12)</h3>
+                <div class="source-item"><div class="source-title">Attorney General Mayes Demands Answers from DHS</div><div class="source-outlet">Arizona Attorney General — February 10, 2026</div><a href="https://www.azag.gov/press-release/attorney-general-mayes-demands-answers-dhs-proposed-ice-detention-facility-surprise" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Mayes considers 'nuisance' lawsuit to stop Arizona ICE detention facility</div><div class="source-outlet">KJZZ (NPR Arizona) — February 10, 2026</div><a href="https://www.kjzz.org/politics/2026-02-10/mayes-considers-nuisance-lawsuit-to-stop-arizona-ice-detention-facility" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Kris Mayes Sets Deadline for DHS to Explain Surprise Detention Center Plans</div><div class="source-outlet">Cactus Politics — February 11, 2026</div><a href="https://cactuspolitics.com/2026/02/kris-mayes-deadline-dhs-surprise-detention-center-plans/" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Az AG Mayes considers public nuisance lawsuit to stop ICE detention center</div><div class="source-outlet">Tucson Sentinel — February 11, 2026</div><a href="https://www.tucsonsentinel.com/local/report/021126_mayes_ice_surprise/" target="_blank">Read Article →</a></div>
+            </div>
+
+            <div class="source-category"><h3>City Council Action (Feb 11-12)</h3>
+                <div class="source-item"><div class="source-title">Surprise council plans trip to D.C. to get ICE answers</div><div class="source-outlet">Surprise Independent — February 11, 2026</div><a href="https://www.yourvalley.net/surprise-independent/stories/surprise-council-plans-trip-to-dc-to-get-ice-answers,661099" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Surprise officials demand details, clarity on proposed ICE facility</div><div class="source-outlet">AZFamily — February 12, 2026</div><a href="https://www.azfamily.com/2026/02/12/surprise-officials-demand-details-clarity-proposed-ice-facility/" target="_blank">Read Article →</a></div>
+            </div>
+
+            <div class="source-category"><h3>U.S. Senators Letter (Feb 10)</h3>
+                <div class="source-item"><div class="source-title">Arizona AG, US senators demand answers on proposed ICE facility in Surprise</div><div class="source-outlet">AZFamily — February 10, 2026</div><a href="https://www.azfamily.com/2026/02/10/arizona-ag-us-senators-demand-answers-proposed-ice-facility-surprise/" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Ariz. senators challenge Surprise ICE center on environmental grounds</div><div class="source-outlet">National Today — February 12, 2026</div><a href="https://nationaltoday.com/us/az/surprise/news/2026/02/10/ariz-senators-challenge-surprise-ice-center-on-environmental-grounds/" target="_blank">Read Article →</a></div>
+            </div>
+
             <div class="source-category"><h3>February 3rd Meeting Coverage</h3>
                 <div class="source-item"><div class="source-title">Hundreds packed Surprise council meeting about ICE facility</div><div class="source-outlet">KJZZ (NPR Arizona) — February 5, 2026</div><a href="https://www.kjzz.org/the-show/2026-02-05/hundreds-packed-surprise-council-meeting-about-ice-facility-heres-what-they-had-to-say" target="_blank">Read Article →</a></div>
                 <div class="source-item"><div class="source-title">Dozens protest as Surprise mayor says ICE facility is out of city's hands</div><div class="source-outlet">AZFamily — February 3, 2026</div><a href="https://www.azfamily.com/2026/02/04/dozens-protest-surprise-mayor-says-ice-facility-is-out-citys-hands/" target="_blank">Read Article →</a></div>
-                <div class="source-item"><div class="source-title">Hundreds pack Surprise City Council meeting, protest outside over ICE facility</div><div class="source-outlet">ABC15 Arizona — February 3, 2026</div><a href="https://www.abc15.com/news/region-west-valley/surprise/hundreds-pack-surprise-city-council-meeting-protest-outside-over-ice-facility" target="_blank">Read Article →</a></div>
                 <div class="source-item"><div class="source-title">ICE warehouse purchase fuels Valley immigration enforcement concerns</div><div class="source-outlet">Axios Phoenix — February 4, 2026</div><a href="https://www.axios.com/local/phoenix/2026/02/04/dhs-surprise-warehouse-immigration-detention" target="_blank">Read Article →</a></div>
-                <div class="source-item"><div class="source-title">'Refuse complicity': Surprise residents demand city council oppose massive ICE detention center</div><div class="source-outlet">CALÓ News — February 3, 2026</div><a href="https://www.calonews.com/arizona/refuse-complicity-surprise-residents-demand-city-council-oppose-massive-ice-detention-center/article_2d76e2a4-ab2b-4e3a-bf31-dda0e61f2a25.html" target="_blank">Read Article →</a></div>
             </div>
+            
             <div class="source-category"><h3>Rep. Gosar Letter to DHS</h3>
-                <div class="source-item"><div class="source-title">Uproar over Surprise ICE facility prompts Gosar to demand transparency from Noem</div><div class="source-outlet">Cronkite News — February 4, 2026</div><a href="https://cronkitenews.azpbs.org/2026/02/04/surprise-ice-facility-gosar-noem/" target="_blank">Read Article →</a></div>
-                <div class="source-item"><div class="source-title">Rep. Paul Gosar requests info on proposed ICE facility in Surprise</div><div class="source-outlet">National Today — February 4, 2026</div><a href="https://nationaltoday.com/us/az/surprise/news/2026/02/04/rep-paul-gosar-requests-info-on-possible-ice-facility-in-surprise/" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Rep. Gosar sends letter demanding 'transparency' over ICE facility</div><div class="source-outlet">KJZZ — February 6, 2026</div><a href="https://www.kjzz.org/politics/2026-02-06/rep-gosar-sends-letter-demanding-transparency-over-ice-facility-in-surprise" target="_blank">Read Article →</a></div>
             </div>
-            <div class="source-category"><h3>Democratic Representatives Letter</h3>
-                <div class="source-item"><div class="source-title">Arizona's Congressional Democrats question Surprise ICE facility purchase</div><div class="source-outlet">AZFamily — February 6, 2026</div><a href="https://www.azfamily.com/2026/02/06/arizonas-congressional-democrats-question-surprise-ice-facility-purchase/" target="_blank">Read Article →</a></div>
-            </div>
+            
             <div class="source-category"><h3>Surprise, Arizona Facility</h3>
                 <div class="source-item"><div class="source-title">ICE is planning a 1,500-bed processing facility in Surprise</div><div class="source-outlet">KJZZ (NPR Arizona) — January 30, 2026</div><a href="https://www.kjzz.org/politics/2026-01-30/ice-is-planning-a-1-500-bed-processing-facility-in-a-surprise-warehouse-it-just-bought-for-70m" target="_blank">Read Article →</a></div>
-                <div class="source-item"><div class="source-title">Records: ICE buys Surprise warehouse facility for $70 million</div><div class="source-outlet">AZFamily / Arizona's Family — January 29, 2026</div><a href="https://www.azfamily.com/2026/01/29/records-ice-buys-surprise-warehouse-facility-70-million/" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">Records: ICE buys Surprise warehouse facility for $70 million</div><div class="source-outlet">AZFamily — January 29, 2026</div><a href="https://www.azfamily.com/2026/01/29/records-ice-buys-surprise-warehouse-facility-70-million/" target="_blank">Read Article →</a></div>
                 <div class="source-item"><div class="source-title">ICE purchases warehouse in West Valley the size of 7 football fields</div><div class="source-outlet">12News (NBC) — January 29, 2026</div><a href="https://www.12news.com/article/news/politics/immigration-news/ice-purchases-warehouse-west-valley-size-of-seven-football-fields/75-9700f4f7-5f83-4d97-b44a-5af1dd13dafe" target="_blank">Read Article →</a></div>
                 <div class="source-item"><div class="source-title">ICE eyes warehouses for its mass detention network</div><div class="source-outlet">The Washington Post — January 30, 2026</div><a href="https://www.washingtonpost.com/investigations/2026/01/30/ice-warehouse-detention-dhs-immigration/" target="_blank">Read Article →</a></div>
             </div>
+            
             <div class="source-category"><h3>Minneapolis Police Costs & Impact</h3>
                 <div class="source-item"><div class="source-title">Minneapolis police racked up millions in overtime in less than 2 weeks</div><div class="source-outlet">CBS Minnesota — January 28, 2026</div><a href="https://www.cbsnews.com/minnesota/news/minneapolis-police-overtime-immigration-enforcement-surge/" target="_blank">Read Article →</a></div>
-                <div class="source-item"><div class="source-title">MN Attorney General, Minneapolis and Saint Paul sue to halt ICE surge</div><div class="source-outlet">City of Minneapolis Official Website — January 12, 2026</div><a href="https://www.minneapolismn.gov/news/2026/january/ag-lawsuit/" target="_blank">Read Article →</a></div>
-                <div class="source-item"><div class="source-title">Attorney General Ellison and cities sue to halt ICE surge</div><div class="source-outlet">Minnesota Attorney General — January 12, 2026</div><a href="https://www.ag.state.mn.us/Office/Communications/2026/01/12_ICE.asp" target="_blank">Read Article →</a></div>
+                <div class="source-item"><div class="source-title">MN Attorney General, Minneapolis and Saint Paul sue to halt ICE surge</div><div class="source-outlet">City of Minneapolis — January 12, 2026</div><a href="https://www.minneapolismn.gov/news/2026/january/ag-lawsuit/" target="_blank">Read Article →</a></div>
             </div>
+            
             <div class="source-category"><h3>Oklahoma City Cancellation</h3>
                 <div class="source-item"><div class="source-title">Oklahoma City ICE detention center proposal halted after community opposition</div><div class="source-outlet">KOCO News 5 (ABC) — January 30, 2026</div><a href="https://www.koco.com/article/oklahoma-city-ice-detention-center-halted-community-opposition/70194624" target="_blank">Read Article →</a></div>
                 <div class="source-item"><div class="source-title">Oklahoma City warehouse won't become ICE detention center</div><div class="source-outlet">KGOU (NPR Oklahoma) — January 29, 2026</div><a href="https://www.kgou.org/2026-01-29/okc-warehouse-no-longer-being-considered-for-ice-detention-center" target="_blank">Read Article →</a></div>
             </div>
+            
             <div class="source-category"><h3>Hanover County, Virginia Opposition</h3>
                 <div class="source-item"><div class="source-title">Hanover County officials push back on proposed ICE facility</div><div class="source-outlet">WVTF (NPR Virginia) — January 28, 2026</div><a href="https://www.wvtf.org/news/2026-01-28/hanover-county-officials-push-back-on-proposed-ice-facility" target="_blank">Read Article →</a></div>
-                <div class="source-item"><div class="source-title">Company withdraws plan to sell Hanover building to DHS</div><div class="source-outlet">NBC12 Richmond — January 30, 2026</div><a href="https://www.12onyourside.com/2026/01/30/company-withdraws-plan-sell-building-dhs-ice-facility/" target="_blank">Read Article →</a></div>
             </div>
+            
             <div class="source-category"><h3>Eloy Detention Center (Arizona)</h3>
                 <div class="source-item"><div class="source-title">New Report Compiles Decades of Abuse at Eloy Detention Center</div><div class="source-outlet">Detention Watch Network — November 6, 2024</div><a href="https://www.detentionwatchnetwork.org/pressroom/releases/2024/new-report-compiles-decades-abuse-notorious-ice-detention-center-arizona" target="_blank">Read Article →</a></div>
                 <div class="source-item"><div class="source-title">It's the deadliest year for people in ICE custody in decades</div><div class="source-outlet">NPR — October 23, 2025</div><a href="https://www.npr.org/transcripts/nx-s1-5538090" target="_blank">Read Article →</a></div>
-                <div class="source-item"><div class="source-title">Arizona lawmaker wants to abolish for-profit ICE detention centers</div><div class="source-outlet">Phoenix New Times — January 2026</div><a href="https://www.phoenixnewtimes.com/news/arizona-lawmaker-wants-to-abolish-for-profit-ice-detention-centers-40636239/" target="_blank">Read Article →</a></div>
             </div>
         </div>
     </div>
 </section>
+
 <section>
     <div class="container">
         <div class="section-title"><h2>Resources & Organizations</h2><p>Connect with groups fighting for community rights</p></div>
@@ -317,45 +428,51 @@
         </div>
     </div>
 </section>
+
 <footer>
     <div class="container">
         <div class="footer-content">
-            <div class="footer-section"><h4>Quick Links</h4><a href="#update">Latest Update</a><a href="#facts">The Facts</a><a href="#action">Take Action</a><a href="#sources">Sources</a></div>
-            <div class="footer-section"><h4>Key Dates</h4><p><strong>Feb 3, 2026:</strong> 1,000+ residents spoke out</p><p><strong>Feb 18, 2026:</strong> Next Council Meeting (6 PM)</p><p><strong>Feb 18-19:</strong> Gosar's 10-day deadline for DHS</p></div>
-            <div class="footer-section"><h4>Share This Page</h4><p>Use hashtag: <strong>#NoICEinSurprise</strong></p><p>Post on Nextdoor, Facebook, and local community groups</p></div>
+            <div class="footer-section"><h4>Quick Links</h4><a href="#update">Latest</a><a href="#facts">Facts</a><a href="#action">Take Action</a><a href="#sources">Sources</a></div>
+            <div class="footer-section"><h4>Key Dates</h4><p><strong>Feb 17, 2026:</strong> AG Mayes Deadline for DHS</p><p><strong>Feb 18, 2026:</strong> City Council Meeting (6 PM)</p><p><strong>March 15-19:</strong> Council DC Trip</p></div>
+            <div class="footer-section"><h4>Share & Stay Updated</h4><p>Hashtag: <strong>#NoICEinSurprise</strong></p><p>Check this page regularly for updates</p><p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">💡 Want email notifications? Contact us to get added to the update list</p></div>
         </div>
-        <div class="footer-bottom"><p>Created by concerned Surprise residents. Last updated: February 9, 2026</p><p>The community showed up. Now we keep the pressure on.</p></div>
+        <div class="footer-bottom"><p><strong>Last updated: February 12, 2026 | 10:00 PM</strong></p><p>Created by concerned Surprise residents. The community showed up. Now we keep the pressure on.</p><p style="margin-top: 0.5rem; font-size: 0.85rem;">Note: Upload Mayor_Sartor_Letter_Feb_11_2026.pdf to the same directory as index.html</p></div>
     </div>
 </footer>
+
 <script>
 function copyLetter() {
-    const letterText = `Subject: Demand City Pass Formal Opposition Resolution to ICE Facility
+    const letterText = `Subject: Support Mayor Sartor's Actions & Demand Formal Opposition Resolution
 
 Mayor Sartor and Surprise City Council,
 
-I attended (or supported) the February 3rd City Council meeting where over 1,000 residents spoke in opposition to the ICE detention facility at 13290 W Sweetwater Avenue. Our community made its voice clear.
+I want to thank you for listening to the over 1,000 residents who spoke at the February 3rd City Council meeting in opposition to the ICE detention facility at 13290 W Sweetwater Avenue. I appreciate your February 11th letter to DHS Secretary Noem and your decision to travel to Washington D.C. March 15-19 to demand answers.
 
-While you cite the federal supremacy clause, that does not mean the city must remain silent. Hanover County, Virginia passed a formal opposition resolution in January 2026. Rep. Paul Gosar sent a letter to DHS demanding transparency. Even federal representatives recognize this requires local accountability.
+However, sending letters is not enough. Hanover County, Virginia passed a formal opposition resolution. Attorney General Kris Mayes is considering a lawsuit. Even Rep. Paul Gosar and Senators Kelly and Gallego are demanding transparency. The city must take a stronger stand.
 
 I am calling on you to:
 
-1. Pass a formal resolution opposing this facility and demanding DHS halt operations until community impact is assessed
-2. Demand a public meeting with DHS officials before any facility opens
-3. Commission an independent impact study on property values, traffic, emergency services, and public safety
-4. Refuse city cooperation (utilities, services, permits) until transparency is provided
-5. Work with state and federal representatives to seek alternative sites
+1. Pass a formal resolution opposing this facility before your DC trip
+2. Coordinate with Attorney General Mayes and support her legal action
+3. Demand a public meeting with DHS officials upon your return from DC
+4. Commission an independent impact study on property values, traffic, emergency services, and public safety costs
+5. Refuse city cooperation (utilities, services, permits) until full transparency is provided
 
-Over 1,000 residents showed up on February 3rd. We will show up again on February 18th. The city's silence makes you complicit. Pass a resolution. Stand with your community.
+Your letter to Secretary Noem stated: "advance communication and intergovernmental coordination are not merely beneficial—they are essential." I agree. But DHS ignored this principle when they purchased the facility. Don't let them continue to ignore it now.
+
+I will be at the February 18th meeting. Thousands of us will keep showing up until you pass a formal opposition resolution.
 
 Sincerely,
 
 [Your name, address, phone, email]`;
+    
     navigator.clipboard.writeText(letterText).then(() => {
         const btn = document.querySelector('.copy-btn');
         btn.textContent = '✅ Copied!';
         setTimeout(() => { btn.textContent = '📋 Copy Letter to Clipboard'; }, 2000);
     });
 }
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
