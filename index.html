@@ -234,7 +234,6 @@
     .notify-options { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .notify-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.4rem; border-radius: var(--radius); font-weight: 700; font-size: 0.9rem; cursor: pointer; border: 2px solid rgba(255,255,255,0.5); color: white; background: rgba(255,255,255,0.12); transition: all 0.2s; text-decoration: none; }
     .notify-btn:hover { background: rgba(255,255,255,0.25); text-decoration: none; border-color: white; }
-    /* follow.it embed will be injected here */
     #followit-container { margin-top: 1rem; }
 
     /* =============================================
@@ -292,7 +291,7 @@
      HEADER
 ============================================= -->
 <header>
-  <div class="update-bar">🔔 <strong>Site Updated: February 25, 2026</strong> — DHS confirms summer opening &amp; admits no city contact on record; 8,000+ oppose; inspection denied</div>
+  <div class="update-bar">🔔 <strong>Site Updated: February 28, 2026</strong> — Surprise officials head to D.C. for answers; DHS formally posts second Arizona ICE facility contract in Marana</div>
   <nav>
     <div class="logo">🛑 No ICE in Surprise</div>
     <div class="nav-links">
@@ -313,7 +312,7 @@
 ============================================= -->
 <div class="alert-banner">
   <strong>⏰ DHS TARGET: Open by September 30, 2026 — Less than 7 months away. The time to act is now.</strong>
-  DHS admitted on the record they never contacted Surprise before purchase. 8,000+ residents have filed comments. Keep the pressure on.
+  DHS admitted on the record they never contacted Surprise before purchase. 8,000+ residents have filed comments. AG Mayes's Feb. 17 deadline passed — DHS has not responded.
 </div>
 
 <!-- =============================================
@@ -360,12 +359,56 @@
   <div class="container">
     <div class="section-title">
       <h2>🚨 Latest News</h2>
-      <p>Updated February 23, 2026</p>
+      <p>Updated February 28, 2026</p>
     </div>
     <p class="collapse-hint">Tap any headline to expand or collapse</p>
 
-    <!-- CARD: 8,000 Comments + Inspection Denied (top story, expanded) -->
-    <div class="breaking-card top-story" id="card-8000">
+    <!-- CARD: Surprise Officials Head to DC (NEW - Feb 27-28) -->
+    <div class="breaking-card top-story" id="card-dc-trip">
+      <div class="breaking-header" style="background:var(--primary);" onclick="toggleCard('card-dc-trip')">
+        <span class="header-text">🏛️ February 27–28, 2026: Surprise Officials Head to Washington for Answers</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="breaking-body">
+        <ul>
+          <li>🏛️ Surprise city leaders, including Councilman Johnny Melton, are traveling to Washington, D.C. to seek direct answers from DHS about the facility's planned operations and community impact</li>
+          <li>📬 The trip comes after weeks of unanswered letters from the city, the Arizona Attorney General, and multiple members of Congress</li>
+          <li>📭 AG Kris Mayes set a February 17 deadline for DHS to respond to her letter — as of February 25, her office confirmed DHS had not replied</li>
+          <li>🗣️ Councilman Melton said most concerns he has heard from residents center on who will be housed at the facility and what operations will look like day-to-day</li>
+          <li>📅 The city's previously scheduled March 15–19 D.C. trip remains on the calendar; this visit appears to be an additional, earlier contact attempt</li>
+          <li>🤐 DHS has not confirmed any meetings with Surprise city officials</li>
+        </ul>
+        <p class="source-link">Source: <a href="https://www.azfamily.com/video/2026/02/28/surprise-officials-head-dc-answers-planned-ice-facility/" target="_blank">AZFamily — February 27, 2026 →</a></p>
+      </div>
+    </div>
+
+    <!-- CARD: Marana Formal Contract Posted (NEW - Feb 26-27) -->
+    <div class="breaking-card" id="card-marana-contract">
+      <div class="breaking-header" style="background:#e67e22;" onclick="toggleCard('card-marana-contract')">
+        <span class="header-text">📋 February 26–27, 2026: DHS Formally Posts Contract for Second Arizona ICE Facility — Marana</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="breaking-body">
+        <ul>
+          <li>📄 DHS posted a public sole-source contract notice to award Management &amp; Training Corporation (MTC) the contract to operate a detention facility at a former state prison in Marana, near Tucson</li>
+          <li>👥 Documents describe a facility holding approximately 513–775 male detainees; MTC confirmed no final agreement has been signed</li>
+          <li>🏢 MTC currently operates five immigration detention facilities across the Southwest; it previously ran the Marana site as an Arizona state prison</li>
+          <li>🏛️ Pima County Board of Supervisors passed a formal resolution opposing the Marana facility 4-1 — the type of formal action Surprise has not yet taken</li>
+          <li>📬 Reps. Grijalva, Stanton, and Ansari — the same members pressing DHS on Surprise — sent a separate letter demanding answers on Marana</li>
+          <li>📅 ICE's stated target: activate all facilities, including Marana, by <strong>November 30, 2026</strong></li>
+          <li>🗺️ Arizona is now the site of two simultaneous proposed ICE detention facility expansions</li>
+        </ul>
+        <p class="source-link">
+          Sources:
+          <a href="https://www.azfamily.com/2026/02/27/ice-posts-notice-award-contract-another-arizona-detention-facility/" target="_blank">AZFamily (Feb 27)</a> |
+          <a href="https://www.kjzz.org/fronteras-desk/2026-02-27/ice-detention-center-planned-for-marana-dhs-documents-say" target="_blank">KJZZ (Feb 27)</a> |
+          <a href="https://azmirror.com/2026/02/27/ice-plans-to-reopen-marana-private-prison-as-513-bed-immigration-detention-center/" target="_blank">Arizona Mirror (Feb 27)</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- CARD: 8,000 Comments + Inspection Denied -->
+    <div class="breaking-card top-story collapsed" id="card-8000">
       <div class="breaking-header" style="background:var(--accent);" onclick="toggleCard('card-8000')">
         <span class="header-text">🔴 February 24–25, 2026: 8,000+ Comments Filed Against Facility — Building Inspection DENIED</span>
         <span class="chevron">▼</span>
@@ -384,8 +427,8 @@
       </div>
     </div>
 
-    <!-- CARD: DHS Confirms Summer Opening, Admits No City Contact (top story, expanded) -->
-    <div class="breaking-card top-story" id="card-dhs-noem">
+    <!-- CARD: DHS Confirms Summer Opening, Admits No City Contact -->
+    <div class="breaking-card top-story collapsed" id="card-dhs-noem">
       <div class="breaking-header" style="background:var(--primary);" onclick="toggleCard('card-dhs-noem')">
         <span class="header-text">📄 February 23–24, 2026: DHS Officially Confirms It Never Contacted Surprise — Targets September 30 Opening</span>
         <span class="chevron">▼</span>
@@ -405,28 +448,27 @@
         <p class="source-link">Source: <a href="https://www.azfamily.com/2026/02/24/ice-facility-surprise-could-open-by-summers-end-dhs-tells-arizona-lawmaker/" target="_blank">AZFamily — February 24, 2026 →</a></p>
       </div>
     </div>
+
+    <!-- CARD: Arson/Vandalism (rewritten — straight news, no coalition statement) -->
     <div class="breaking-card collapsed" id="card-vandalism">
-      <div class="breaking-header" style="background:var(--purple);" onclick="toggleCard('card-vandalism')">
-        <span class="header-text">⚠️ February 21, 2026: Vandalism at Facility — FBI &amp; ATF Investigating. This Is Not Our Movement.</span>
+      <div class="breaking-header" style="background:#6c757d;" onclick="toggleCard('card-vandalism')">
+        <span class="header-text">⚠️ February 21, 2026: Vandalism at Facility Under FBI and ATF Investigation</span>
         <span class="chevron">▼</span>
       </div>
       <div class="breaking-body">
-        <p style="background:#fdf2f8;border-left:4px solid var(--purple);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>The Surprise Community Coalition and all peaceful opponents of this facility strongly and unequivocally condemn this act.</strong> Vandalism is illegal, counterproductive, and contrary to everything this community stands for. Our campaign wins through showing up, contacting representatives, and legal challenges — not destruction. Anyone considering similar acts is actively harming this cause.</p>
         <ul>
-          <li>🕐 At approximately 1:30 a.m. Saturday, February 21, Surprise Police responded to criminal damage at 13290 W Sweetwater Avenue</li>
-          <li>🪟 A suspect broke a window, ignited a fire, and threw a propane tank into the building before fleeing</li>
-          <li>🚿 The interior sprinkler system extinguished the fire quickly — no significant damage</li>
-          <li>🔍 The FBI Phoenix field office opened a federal investigation with ATF assistance</li>
-          <li>👤 No suspects identified or arrested as of this update</li>
-          <li>🏛️ Councilman Melton: <em>"Criminal acts are going to hurt their cause. Breaking windows and trying to light fires — that doesn't help anybody."</em></li>
-          <li>📰 Story picked up nationally by CNN, AP, Fox News, KYMA, Arizona Mirror, Tucson Sentinel</li>
+          <li>🕐 At approximately 1:30 a.m. Saturday, February 21, Surprise Police responded to a report of criminal damage at 13290 W Sweetwater Avenue</li>
+          <li>🏛️ Officers determined the property was federally owned and transferred the investigation to the FBI and DHS</li>
+          <li>🪟 According to DHS, a suspect broke a window, ignited a fire, and threw a propane tank into the building before fleeing; the interior sprinkler system extinguished the fire</li>
+          <li>🔍 The FBI Phoenix field office opened a federal investigation with ATF assistance; no suspects identified or arrested as of this update</li>
+          <li>📰 The incident was reported nationally by CNN, AP, Fox News, KYMA, Arizona Mirror, and Tucson Sentinel</li>
         </ul>
-        <p style="margin-top:1rem;font-style:italic;color:var(--purple);"><strong>Our message:</strong> Keep showing up. Keep calling. Keep writing letters. That is our power — and it's working.</p>
-        <p class="source-link">Sources: <a href="https://www.azfamily.com/2026/02/21/criminal-damage-federal-building-surprise-under-investigation-police-say/" target="_blank">AZFamily</a> | <a href="https://www.12news.com/article/news/local/valley/police-investigate-criminal-damage-federal-government-facility-surprise/75-64756ec2-7800-418a-862d-340d6f5bc82e" target="_blank">12News</a> | <a href="https://www.foxnews.com/us/fbi-investigates-criminal-damage-federal-ice-warehouse-facility-arizona" target="_blank">Fox News</a> | <a href="https://kyma.com/news/arizona-news/2026/02/23/evidence-of-fire-stunt-found-at-ice-facility-in-arizona/" target="_blank">KYMA/CNN (Feb 23)</a></p>
+        <p style="margin-top:0.75rem;font-style:italic;color:#555;">"I don't know if this person who vandalized and attempted to do arson even cares about this issue... Criminal acts are going to hurt their cause. Breaking windows and trying to light fires — that doesn't help anybody." — Surprise Councilman Johnny Melton</p>
+        <p class="source-link">Sources: <a href="https://www.azfamily.com/2026/02/21/criminal-damage-federal-building-surprise-under-investigation-police-say/" target="_blank">AZFamily</a> | <a href="https://www.12news.com/article/news/local/valley/police-investigate-criminal-damage-federal-government-facility-surprise/75-64756ec2-7800-418a-862d-340d6f5bc82e" target="_blank">12News</a> | <a href="https://azmirror.com/briefs/ice-warehouse-in-surprise-targeted-by-arsonist-days-after-massive-community-protests/" target="_blank">Arizona Mirror</a> | <a href="https://kyma.com/news/arizona-news/2026/02/23/evidence-of-fire-stunt-found-at-ice-facility-in-arizona/" target="_blank">KYMA/CNN</a></p>
       </div>
     </div>
 
-    <!-- CARD: AP National Story (expanded) -->
+    <!-- CARD: AP National Story -->
     <div class="breaking-card collapsed" id="card-ap">
       <div class="breaking-header" style="background:var(--primary);" onclick="toggleCard('card-ap')">
         <span class="header-text">📰 February 21, 2026: Associated Press — Surprise Named in National Story on ICE Secrecy</span>
@@ -444,7 +486,7 @@
       </div>
     </div>
 
-    <!-- CARD: Feb 18 KJZZ 10,000 (collapsed) -->
+    <!-- CARD: Feb 18 KJZZ 10,000 -->
     <div class="breaking-card top-story collapsed" id="card-feb18-kjzz">
       <div class="breaking-header" style="background:var(--accent);" onclick="toggleCard('card-feb18-kjzz')">
         <span class="header-text">🔴 February 18, 2026: Documents Reveal Up to 10,000 Detainees for Months at a Time</span>
@@ -465,7 +507,7 @@
       </div>
     </div>
 
-    <!-- CARD: Feb 18 Council Meeting (collapsed) -->
+    <!-- CARD: Feb 18 Council Meeting -->
     <div class="breaking-card collapsed" id="card-feb18-council">
       <div class="breaking-header" style="background:var(--primary);" onclick="toggleCard('card-feb18-council')">
         <span class="header-text">🏛️ February 18 City Council Meeting — Standing-Room-Only, City Still Awaiting DHS Answers</span>
@@ -483,7 +525,7 @@
       </div>
     </div>
 
-    <!-- CARD: Feb 17 DHS Docs (collapsed) -->
+    <!-- CARD: Feb 17 DHS Docs -->
     <div class="breaking-card collapsed" id="card-feb17-docs">
       <div class="breaking-header" style="background:var(--warning);" onclick="toggleCard('card-feb17-docs')">
         <span class="header-text">📄 February 17: DHS Releases Official Cost Documents — City Leaders Still Left With Questions</span>
@@ -503,7 +545,7 @@
       </div>
     </div>
 
-    <!-- CARD: Feb 15 $38B (collapsed) -->
+    <!-- CARD: Feb 15 $38B -->
     <div class="breaking-card collapsed" id="card-feb15-38b">
       <div class="breaking-header" style="background:var(--primary);" onclick="toggleCard('card-feb15-38b')">
         <span class="header-text">📰 February 15: Leaked Document — $38.3 Billion National Detention Expansion Plan</span>
@@ -522,7 +564,7 @@
       </div>
     </div>
 
-    <!-- CARD: Feb 12 Gosar (collapsed) -->
+    <!-- CARD: Feb 12 Gosar -->
     <div class="breaking-card collapsed" id="card-feb12-gosar">
       <div class="breaking-header" style="background:var(--primary);" onclick="toggleCard('card-feb12-gosar')">
         <span class="header-text">🗣️ February 12: Rep. Gosar — "This is a crappy process"</span>
@@ -539,7 +581,7 @@
       </div>
     </div>
 
-    <!-- CARD: Feb 3 Victory (collapsed) -->
+    <!-- CARD: Feb 3 Victory -->
     <div class="breaking-card collapsed" id="card-feb3-victory">
       <div class="breaking-header" style="background:var(--success);" onclick="toggleCard('card-feb3-victory')">
         <span class="header-text">✊ February 3rd — Over 1,000 Residents Packed City Hall. The Moment That Changed Everything.</span>
@@ -550,7 +592,7 @@
           <li>🏟️ <strong>Over 1,000 Surprise residents packed City Hall</strong> in an unprecedented show of community opposition</li>
           <li>🗣️ 4+ hour public comment period — vast majority opposed the facility</li>
           <li>📬 Even Rep. Paul Gosar (R) sent letter to DHS demanding transparency</li>
-          <li>⚖️ AG Kris Mayes pursued public nuisance lawsuit threat</li>
+          <li>⚖️ AG Kris Mayes pursued public nuisance lawsuit threat, setting a February 17 deadline for DHS to respond — DHS did not reply by that date</li>
           <li>🏛️ City Council voted to send official letter to DHS and plan DC trip for March 15–19</li>
           <li>📜 U.S. Senators Kelly and Gallego sent joint letter demanding environmental reviews</li>
         </ul>
@@ -774,19 +816,19 @@
       </div>
     </div>
 
-    <!-- Also in Arizona: Marana -->
+    <!-- Also in Arizona: Marana — updated with formal contract info -->
     <div class="evidence-card also-az-card" style="margin-bottom:1.5rem;">
-      <div class="evidence-header">🏚️ Also in Arizona: Marana Facility Faces Same Opposition (February 2026)</div>
+      <div class="evidence-header">🗺️ Also in Arizona: DHS Formally Posts Contract for Marana ICE Facility (February 2026)</div>
       <div class="evidence-body">
         <ul>
-          <li>DHS is also pursuing a 500-bed ICE facility at a shuttered state prison in Marana (near Tucson)</li>
-          <li>Pima County Board of Supervisors has formally opposed the Marana facility</li>
-          <li>Reps. Ansari, Grijalva, and Stanton sent a separate letter on February 19 demanding transparency on Marana</li>
+          <li>DHS posted a public sole-source contract notice on Feb. 26 to award Management &amp; Training Corporation (MTC) a contract for a 513–775 bed detention facility at a shuttered state prison in Marana, near Tucson</li>
+          <li>MTC confirmed no final agreement has been signed; Pima County supervisors have formally opposed the facility 4-1</li>
+          <li>Reps. Ansari, Grijalva, and Stanton — the same members pressing DHS on Surprise — sent a separate letter demanding transparency on Marana</li>
+          <li>ICE's stated goal: activate all facilities by November 30, 2026</li>
           <li>The same congressional allies fighting for Surprise are fighting Marana — Arizona is resisting on multiple fronts</li>
-          <li>Marana opposition shows formal resolutions by local governments ARE achievable and DO matter</li>
+          <li>Pima County's formal resolution shows that official government opposition IS achievable and on the record</li>
         </ul>
-        <p style="margin-top:1rem;font-style:italic;color:#e67e22;"><strong>The takeaway:</strong> Surprise is not alone. This is a statewide fight, and organized opposition at the local level is the proven strategy.</p>
-        <p class="source-link">Sources: Reps. Ansari, Stanton &amp; Grijalva Feb 19 letter to DHS | <a href="https://www.tucsonsentinel.com/local/report/022326_ice_surprise_warehouse/ice-warehouse-surprise-targeted-by-arsonist-days-after-massive-community-protests" target="_blank">Tucson Sentinel (Feb 23)</a></p>
+        <p class="source-link">Sources: <a href="https://www.azfamily.com/2026/02/27/ice-posts-notice-award-contract-another-arizona-detention-facility/" target="_blank">AZFamily (Feb 27)</a> | <a href="https://www.kjzz.org/fronteras-desk/2026-02-27/ice-detention-center-planned-for-marana-dhs-documents-say" target="_blank">KJZZ (Feb 27)</a> | <a href="https://news.azpm.org/p/newsheadlines/2026/2/27/228667-contract-for-possible-marana-ice-facility-draws-differing-stances-from-town-county-leaders/" target="_blank">AZPM (Feb 27)</a></p>
       </div>
     </div>
 
@@ -1020,14 +1062,39 @@
     <div class="source-list">
 
       <div class="source-category">
-        <h3>🆕 February 23–25, 2026 — Latest</h3>
+        <h3>🆕 February 26–28, 2026 — Latest</h3>
         <div class="source-item">
-          <div class="source-title">Over 8,000 weigh in against Surprise ICE detention facility <span class="new-badge">NEW</span></div>
+          <div class="source-title">Surprise officials head to D.C. for answers on planned ICE facility <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">AZFamily — February 27, 2026</div>
+          <a href="https://www.azfamily.com/video/2026/02/28/surprise-officials-head-dc-answers-planned-ice-facility/" target="_blank">Read Article →</a>
+        </div>
+        <div class="source-item">
+          <div class="source-title">DHS posts notice to award contract for another Arizona ICE detention facility (Marana) <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">AZFamily — February 27, 2026</div>
+          <a href="https://www.azfamily.com/2026/02/27/ice-posts-notice-award-contract-another-arizona-detention-facility/" target="_blank">Read Article →</a>
+        </div>
+        <div class="source-item">
+          <div class="source-title">ICE detention center planned for Marana, DHS documents say <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">KJZZ (NPR Arizona) — February 27, 2026</div>
+          <a href="https://www.kjzz.org/fronteras-desk/2026-02-27/ice-detention-center-planned-for-marana-dhs-documents-say" target="_blank">Read Article →</a>
+        </div>
+        <div class="source-item">
+          <div class="source-title">ICE plans to reopen Marana private prison as 513-bed immigration detention center <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">Arizona Mirror — February 27, 2026</div>
+          <a href="https://azmirror.com/2026/02/27/ice-plans-to-reopen-marana-private-prison-as-513-bed-immigration-detention-center/" target="_blank">Read Article →</a>
+        </div>
+        <div class="source-item">
+          <div class="source-title">Contract for possible Marana ICE facility draws differing stances from town, county leaders <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">AZPM — February 27, 2026</div>
+          <a href="https://news.azpm.org/p/newsheadlines/2026/2/27/228667-contract-for-possible-marana-ice-facility-draws-differing-stances-from-town-county-leaders/" target="_blank">Read Article →</a>
+        </div>
+        <div class="source-item">
+          <div class="source-title">Over 8,000 weigh in against Surprise ICE detention facility</div>
           <div class="source-outlet">AZFamily — February 25, 2026</div>
           <a href="https://www.azfamily.com/2026/02/25/over-8000-weigh-against-surprise-ice-detention-facility/" target="_blank">Read Article →</a>
         </div>
         <div class="source-item">
-          <div class="source-title">ICE facility in Surprise could open by summer's end, DHS tells Arizona lawmaker <span class="new-badge">NEW</span></div>
+          <div class="source-title">ICE facility in Surprise could open by summer's end, DHS tells Arizona lawmaker</div>
           <div class="source-outlet">AZFamily — February 24, 2026</div>
           <a href="https://www.azfamily.com/2026/02/24/ice-facility-surprise-could-open-by-summers-end-dhs-tells-arizona-lawmaker/" target="_blank">Read Article →</a>
         </div>
@@ -1295,7 +1362,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Created by concerned Surprise residents. Last updated: February 25, 2026</p>
+      <p>Created by concerned Surprise residents. Last updated: February 28, 2026</p>
       <p>DHS confirmed it never contacted us. September 30 is the deadline. We keep going.</p>
     </div>
   </div>
@@ -1337,7 +1404,6 @@ document.addEventListener('DOMContentLoaded', function() {
       var target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        // Record current scroll position before jumping, so Back returns here
         history.pushState({ scrollY: window.scrollY }, '', targetId);
         target.scrollIntoView({ behavior: 'smooth' });
       }
