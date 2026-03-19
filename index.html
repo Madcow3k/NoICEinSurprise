@@ -291,7 +291,7 @@
      HEADER
 ============================================= -->
 <header>
-  <div class="update-bar">&#x1F514; <strong>Site Updated: March 9, 2026</strong>: DHS Secretary Noem fired; Mullin named replacement; DC trip 6 days away; student petition tops 1,000 signatures; 12+ ICE sites cancelled nationwide</div>
+  <div class="update-bar">&#x1F514; <strong>Site Updated: March 18, 2026</strong>: GardaWorld awarded $313M contract (same operator as "Alligator Alcatraz"); federal judge halts Maryland ICE facility on NEPA grounds; Council DC trip underway March 15&ndash;19</div>
   <nav>
     <div class="logo">&#x1F6D1; No ICE in Surprise</div>
     <div class="nav-links">
@@ -311,8 +311,8 @@
      ALERT BANNER
 ============================================= -->
 <div class="alert-banner">
-  <strong>&#x270C;&#xFE0F; DC TRIP IN 6 DAYS: Surprise City Council heads to Washington March 15&ndash;19. Noem is out; new DHS leadership is a fresh opening. Merrimack, NH used this exact playbook and won. Make sure our leaders go with a mandate.</strong>
-  AG Mayes's Feb. 17 deadline passed with no DHS response. September 30 target opening. The time to act is now.
+  <strong>&#x2708;&#xFE0F; COUNCIL IS IN WASHINGTON NOW (March 15&ndash;19): GardaWorld, operator of "Alligator Alcatraz," awarded $313M contract. A federal judge halted Maryland's identical ICE facility on NEPA grounds. The legal and political pressure is building.</strong>
+  AG Mayes's Feb. 17 deadline passed with no DHS response. DHS target opening: September 30, 2026. Construction is moving. Our community must keep pushing.
 </div>
 
 <!-- =============================================
@@ -325,7 +325,8 @@
     <div class="hero-stats">
       <div class="stat-box"><span class="number">8,000+</span><span class="label">Comments Filed Against</span></div>
       <div class="stat-box"><span class="number">Sept 30</span><span class="label">DHS Target Opening</span></div>
-      <div class="stat-box"><span class="number">$400M+</span><span class="label">Total Taxpayer Cost</span></div>
+      <div class="stat-box"><span class="number" id="days-until-opening"></span><span class="label" id="days-label">Days Until Target Opening</span></div>
+      <div class="stat-box"><span class="number">$700M+</span><span class="label">Taxpayer Cost (and climbing)</span></div>
       <div class="stat-box"><span class="number">12+</span><span class="label">ICE Sites Cancelled</span></div>
     </div>
     <div class="cta-buttons">
@@ -359,23 +360,102 @@
   <div class="container">
     <div class="section-title">
       <h2>&#x1F6A8; Latest News</h2>
-      <p>Updated March 9, 2026</p>
+      <p>Updated March 18, 2026</p>
     </div>
     <p class="collapse-hint">Tap any headline to expand or collapse</p>
 
-    <!-- CARD: Noem fired / DC trip opening (top story, expanded) -->
-    <div class="breaking-card top-story" id="card-noem-fired">
-      <div class="breaking-header" style="background:var(--accent);" onclick="toggleCard('card-noem-fired')">
-        <span class="header-text">&#x1F6A8; March 5, 2026: DHS Secretary Noem Fired: New Leadership Is a Fresh Opening for Surprise</span>
+    <!-- CARD: Council DC trip underway (top story, expanded) -->
+    <div class="breaking-card top-story" id="card-dc-trip-now">
+      <div class="breaking-header" style="background:var(--purple);" onclick="toggleCard('card-dc-trip-now')">
+        <span class="header-text">&#x2708;&#xFE0F; March 15&ndash;19, 2026: Council Is in Washington Right Now. What Happens Next Matters.</span>
         <span class="chevron">&#x25BC;</span>
       </div>
       <div class="breaking-body">
-        <p style="background:#fef5f5;border-left:4px solid var(--accent);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>The person who signed the letter claiming DHS never contacted Surprise is no longer the DHS Secretary.</strong> Trump fired Kristi Noem on March 5, nominating Sen. Markwayne Mullin (R-OK) as her replacement effective March 31. The Surprise City Council's DC trip on March 15&ndash;19 arrives at the precise moment of leadership transition, a window that Merrimack, NH used to stop its facility by meeting directly with Noem. The same playbook is now available to Surprise.</p>
+        <p style="background:#f5f0ff;border-left:4px solid var(--purple);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>The Surprise City Council is in Washington, D.C. this week.</strong> The trip coincides with DHS leadership transition: Noem is out, Mullin is not yet confirmed. A federal judge just halted an identical ICE facility in Maryland on NEPA grounds. The legal and political openings are real. The community's job right now: keep the pressure visible and demand a full public debrief when the delegation returns.</p>
+        <ul>
+          <li>&#x2708;&#xFE0F; Council delegation is in DC March 15&ndash;19; no confirmed DHS meetings had been announced as of departure</li>
+          <li>&#x1F3DB;&#xFE0F; Noem's last day is March 31; Mullin not yet confirmed. The city may be meeting with acting or transitional leadership</li>
+          <li>&#x2696;&#xFE0F; On March 12, a federal judge halted construction of Maryland's identical ICE facility on NEPA grounds, a major legal precedent directly relevant to Surprise</li>
+          <li>&#x1F4CB; GardaWorld was awarded a $313M contract on March 6, moving construction forward even as the political fight continues</li>
+          <li>&#x1F4A1; Merrimack's governor went to DC with a clear mandate and came back with a cancellation. Demand the same from Surprise's delegation.</li>
+          <li>&#x1F4AC; When the council returns: attend the next meeting (1st and 3rd Tuesdays at 6 PM) and demand a full public account of every meeting held in Washington</li>
+        </ul>
+        <p class="source-link">Sources: <a href="https://www.azfamily.com/video/2026/02/28/surprise-officials-head-dc-answers-planned-ice-facility/" target="_blank">AZFamily (Feb 28)</a> | <a href="https://www.yourvalley.net/surprise-independent/stories/surprise-council-plans-trip-to-dc-to-get-ice-answers,661099" target="_blank">Surprise Independent</a></p>
+      </div>
+    </div>
+
+    <!-- CARD: GardaWorld $313M contract (top story, expanded) -->
+    <div class="breaking-card top-story" id="card-gardaworld">
+      <div class="breaking-header" style="background:var(--accent);" onclick="toggleCard('card-gardaworld')">
+        <span class="header-text">&#x1F6A8; March 6&ndash;12, 2026: "Alligator Alcatraz" Operator Awarded $313M Contract for Surprise Facility</span>
+        <span class="chevron">&#x25BC;</span>
+      </div>
+      <div class="breaking-body">
+        <p style="background:#fef5f5;border-left:4px solid var(--accent);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>DHS awarded GardaWorld Federal Services a contract worth $313 million to $704 million to renovate and operate the Surprise warehouse.</strong> GardaWorld is the same contractor running "Alligator Alcatraz," the controversial Florida Everglades detention facility. The company has never been directly contracted to oversee a detention facility before this. The contract was awarded through a Department of Defense procurement system, bypassing the standard public bidding process.</p>
+        <ul>
+          <li>&#x1F4B0; Contract value: <strong>$313.4M base, up to $704M through February 2029</strong>, bringing total taxpayer exposure to over $1 billion when combined with the $70M purchase and retrofit costs</li>
+          <li>&#x1F3A0; GardaWorld provides security at the Everglades "Alligator Alcatraz" facility in Florida, which has faced ongoing lawsuits and legal challenges since opening</li>
+          <li>&#x26A0;&#xFE0F; GardaWorld has never been directly contracted to operate a detention facility; the contract was awarded without competitive bidding through a DoD procurement system</li>
+          <li>&#x1F4CB; Reps. Stanton, Ansari, and Grijalva sent letters to both DHS and GardaWorld on March 11&ndash;12 with 17 specific questions about qualifications, safety standards, and accountability</li>
+          <li>&#x2696;&#xFE0F; Former DHS attorney Andy Gordon: "You've got a contractor whose only experience has turned bad. They're going to get a slug of lawsuits. Pretty high likelihood one of the courts will enjoin them from going forward."</li>
+          <li>&#x1F4C5; The contract runs through March 2027 with options extending to February 2029; it is now in effect and work is moving forward</li>
+        </ul>
+        <div class="quote-block">"At a time when in-custody deaths are reaching record highs, it is deeply alarming that DHS is handing out massive federal contracts to companies with no experience operating detention facilities."<cite>Rep. Adelita Grijalva, March 12, 2026</cite></div>
+        <p class="source-link">Sources: <a href="https://www.azfamily.com/2026/03/11/federal-government-selects-controversial-company-run-surprise-ice-facility/" target="_blank">AZFamily (March 10&ndash;11)</a> | <a href="https://www.azfamily.com/2026/03/12/arizona-democrats-raise-concern-about-oversight-surprise-ice-facility/" target="_blank">AZFamily (March 12)</a> | <a href="https://stanton.house.gov/2026/3/stanton-ansari-grijalva-demand-answers-on-surprise-facility-contract-awards" target="_blank">Rep. Stanton press release</a></p>
+      </div>
+    </div>
+
+    <!-- CARD: Maryland federal court TRO (top story, expanded) -->
+    <div class="breaking-card top-story" id="card-maryland-court">
+      <div class="breaking-header" style="background:var(--success);" onclick="toggleCard('card-maryland-court')">
+        <span class="header-text">&#x2696;&#xFE0F; March 11&ndash;12, 2026: Federal Judge Halts Identical ICE Facility in Maryland: The NEPA Argument Just Won in Court</span>
+        <span class="chevron">&#x25BC;</span>
+      </div>
+      <div class="breaking-body">
+        <p style="background:#f0fff4;border-left:4px solid var(--success);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>A federal judge in Maryland issued a temporary restraining order halting construction of an ICE detention facility, ruling DHS likely violated the National Environmental Policy Act.</strong> The Williamsport, Maryland facility is nearly identical to Surprise in scale and method: a purchased warehouse being converted into a 1,500-bed detention center with no environmental review and no community input. AG Mayes had been watching this case. The ruling validates the exact legal argument available to Arizona.</p>
+        <ul>
+          <li>&#x2696;&#xFE0F; U.S. District Judge Brendan Hurson issued the TRO on March 11, halting construction of Maryland's 1,500-bed ICE warehouse facility</li>
+          <li>&#x1F4C4; The judge found DHS had "likely failed to comply" with NEPA, citing no environmental review, no state consultation, and no public comment process</li>
+          <li>&#x1F4A7; Maryland AG's lawsuit argued construction would pollute local waterways, threaten protected species, and overwhelm existing water and sewer infrastructure</li>
+          <li>&#x1F3DB;&#xFE0F; Maryland Gov. Wes Moore: "DHS spent more than $100 million in taxpayer money to purchase a warehouse without an environmental review and without public input. DHS must be held to the same legal standard as every other federal agency."</li>
+          <li>&#x26A0;&#xFE0F; The Surprise facility faces the same legal vulnerabilities: no NEPA review, no public comment, and DHS has deliberately withheld the environmental survey results already conducted</li>
+          <li>&#x1F4A1; AG Mayes's public nuisance threat gains significant force from this ruling. A NEPA-based legal challenge in Arizona would cite the same violations.</li>
+        </ul>
+        <div class="quote-block">"Though temporary, this ruling stops the construction of this massive immigration detention center while our lawsuit continues to play out in court. We will not let DHS and ICE rush through the proper legal process in their haste to ramp up deportations."<cite>Maryland AG Anthony Brown, March 12, 2026</cite></div>
+        <p class="source-link">Sources: <a href="https://www.washingtonpost.com/immigration/2026/03/11/ice-warehouse-detention-center-lawsuit/" target="_blank">Washington Post (March 11)</a> | <a href="https://thedailyrecord.com/2026/03/12/federal-judge-halts-ice-detention-center-maryland/" target="_blank">Maryland Daily Record (March 12)</a> | <a href="https://oag.maryland.gov/News/pages/Attorney-General-Brown-Files-Lawsuit-to-Stop-Construction-of-Unlawful-ICE-Detention-Facility-in-Washington-County.aspx" target="_blank">Maryland AG press release</a></p>
+      </div>
+    </div>
+
+    <!-- CARD: March 13 pre-trip rally (collapsed) -->
+    <div class="breaking-card collapsed" id="card-march13-rally">
+      <div class="breaking-header" style="background:var(--primary);" onclick="toggleCard('card-march13-rally')">
+        <span class="header-text">&#x270A; March 13, 2026: Community Rallies at Warehouse as Council Prepares to Depart for Washington</span>
+        <span class="chevron">&#x25BC;</span>
+      </div>
+      <div class="breaking-body">
+        <ul>
+          <li>&#x1F4E3; Community members, high school students, and Rep. Greg Stanton rallied outside the 13290 W Sweetwater Ave. warehouse on March 13</li>
+          <li>&#x1F3EB; Speakers emphasized the federal government purchased the warehouse without notifying the city, conducting an environmental review, or holding a single public meeting</li>
+          <li>&#x1F4AC; Rep. Stanton: "This is not what the people of Surprise, Arizona want. So we're going to make this impossible to ignore."</li>
+          <li>&#x1F4A1; The rally took place two days before the council's scheduled departure for Washington, building public momentum behind the trip</li>
+        </ul>
+        <p class="source-link">Source: <a href="https://www.azfamily.com/2026/03/14/some-surprise-residents-continue-rally-against-proposed-ice-facility/" target="_blank">AZFamily, March 13&ndash;14, 2026 &#x2192;</a></p>
+      </div>
+    </div>
+
+    <!-- CARD: Noem fired / DC trip opening (collapsed, now historical context) -->
+    <div class="breaking-card collapsed" id="card-noem-fired">
+      <div class="breaking-header" style="background:var(--accent);" onclick="toggleCard('card-noem-fired')">
+        <span class="header-text">&#x1F6A8; March 5, 2026: DHS Secretary Noem Fired: New Leadership Transition During Council's DC Trip</span>
+        <span class="chevron">&#x25BC;</span>
+      </div>
+      <div class="breaking-body">
+        <p style="background:#fef5f5;border-left:4px solid var(--accent);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>The person who signed the letter claiming DHS never contacted Surprise is no longer the DHS Secretary.</strong> Trump fired Kristi Noem on March 5, nominating Sen. Markwayne Mullin (R-OK) as her replacement effective March 31. The Surprise City Council's DC trip on March 15&ndash;19 arrives during this leadership transition, creating uncertainty about who the city will actually meet with.</p>
         <ul>
           <li>&#x1F534; Trump announced Noem's removal via Truth Social on March 5, calling her replacement "effective March 31, 2026"</li>
           <li>&#x1F3DB;&#xFE0F; Noem faced bipartisan grilling in Senate and House hearings March 3&ndash;4 over ICE tactics, a $220 million ad campaign featuring herself, and the deaths of two people at hands of federal agents</li>
           <li>&#x1F1F3;&#x1F1ED; Incoming DHS Secretary Markwayne Mullin (R-OK) has not staked out a position on any specific warehouse facility, including Surprise</li>
-          <li>&#x1F4C5; The Council's DC trip is March 15&ndash;19, during Noem's final two weeks and before Mullin is confirmed. Who will the city meet with?</li>
+          <li>&#x1F4C5; The Council's DC trip (March 15&ndash;19) lands during Noem's final two weeks and before Mullin is confirmed</li>
           <li>&#x2705; Newport, Oregon facility frozen the same week; ICE filed a court declaration stating "no plan or intention" to build there</li>
           <li>&#x2705; Tennessee and Mississippi facilities also cancelled in early March, per PBS NewsHour reporting</li>
           <li>&#x1F4A1; The national wave of cancellations has accelerated. 12+ facilities have now been stopped. Surprise can be next.</li>
@@ -385,43 +465,41 @@
       </div>
     </div>
 
-    <!-- CARD: Merrimack NH success story (top story, expanded) -->
-    <div class="breaking-card top-story" id="card-merrimack">
+    <!-- CARD: Merrimack NH success story (collapsed, now historical reference) -->
+    <div class="breaking-card collapsed" id="card-merrimack">
       <div class="breaking-header" style="background:var(--success);" onclick="toggleCard('card-merrimack')">
         <span class="header-text">&#x2705; February 24, 2026: Merrimack, NH Governor Made a DC Trip and Won: This Is the Surprise Playbook.</span>
         <span class="chevron">&#x25BC;</span>
       </div>
       <div class="breaking-body">
-        <p style="background:#f0fff4;border-left:4px solid var(--success);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>This is the exact model for Surprise on March 15&ndash;19.</strong> NH Governor Kelly Ayotte traveled to Washington, met directly with DHS Secretary Noem, and announced the cancellation of the Merrimack facility the same week. The Surprise City Council is making the same trip. The outcome depends on whether they arrive with a clear mandate, not just questions.</p>
+        <p style="background:#f0fff4;border-left:4px solid var(--success);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>This is the model Surprise's council is following.</strong> NH Governor Kelly Ayotte traveled to Washington, met directly with DHS Secretary Noem, and announced the cancellation of the Merrimack facility the same week. The Surprise City Council made the same trip March 15&ndash;19. The outcome depends on what commitments they secured and what they demand next.</p>
         <ul>
           <li>&#x1F4CD; Merrimack, NH had a proposed 400&ndash;600 bed facility in a 43-acre warehouse, a similar scale to Surprise</li>
           <li>&#x1F3DB;&#xFE0F; Local government formally opposed the facility; residents packed town meetings and flooded the governor's office with calls</li>
           <li>&#x270C;&#xFE0F; Gov. Ayotte made a personal trip to Washington, met with Noem, and the facility was cancelled the same week</li>
           <li>&#x1F4F0; "During my trip to Washington last week, I had productive discussions with Secretary Kristi Noem, and I'm pleased to announce that the Department of Homeland Security will not move forward." Gov. Ayotte, Feb. 24, 2026</li>
-          <li>&#x1F4A1; Key difference: Ayotte is a Republican governor with direct access to the administration. Surprise's council must bring Gosar, Ansari, Stanton, and AG Mayes as their leverage</li>
+          <li>&#x1F4A1; Key difference: Ayotte is a Republican governor with direct access to the administration. Surprise's council must press Gosar, Ansari, Stanton, and AG Mayes as their leverage</li>
           <li>&#x1F4CC; Town manager: "This is democracy at its best." State rep: "This community has fought giants and has come out victorious."</li>
         </ul>
         <div class="quote-block">"Today, the people of Merrimack and all of New Hampshire proved that organized, local voices are more powerful than a federal agency's ruthless expansion."<cite>Kim Herdman Shapiro, Merrimack activist, Feb. 24, 2026</cite></div>
-        <p style="margin-top:1rem;font-weight:600;color:var(--success);">The March 15&ndash;19 trip must produce the same outcome. Go to Washington with a formal resolution, AG Mayes's legal backing, and bipartisan congressional support. Do not come back without answers.</p>
         <p class="source-link">Sources: <a href="https://www.bostonglobe.com/2026/02/24/metro/merrimack-nh-ice-facility-plans/" target="_blank">Boston Globe (Feb 24)</a> | <a href="https://www.nhpr.org/nh-news/2026-02-24/ayotte-ice-detention-merrimack-newhampshire" target="_blank">NHPR (Feb 24)</a> | <a href="https://newhampshirebulletin.com/briefs/ayotte-says-dhs-is-backing-away-from-plans-for-an-immigrant-detention-center-in-merrimack/" target="_blank">NH Bulletin (Feb 24)</a></p>
       </div>
     </div>
 
-    <!-- CARD: DC Trip / AG Mayes deadline (top story, expanded) -->
-    <div class="breaking-card top-story" id="card-dc-trip">
+    <!-- CARD: DC Trip / AG Mayes deadline (collapsed, historical context) -->
+    <div class="breaking-card collapsed" id="card-dc-trip">
       <div class="breaking-header" style="background:var(--primary);" onclick="toggleCard('card-dc-trip')">
-        <span class="header-text">&#x2708;&#xFE0F; March 15&ndash;19: Council DC Trip: AG Mayes Feb. 17 Deadline Passed With No DHS Response</span>
+        <span class="header-text">&#x1F4C4; Background: AG Mayes Feb. 17 Deadline Passed With No DHS Response</span>
         <span class="chevron">&#x25BC;</span>
       </div>
       <div class="breaking-body">
-        <p style="background:#f0f7ff;border-left:4px solid var(--primary);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>The Surprise City Council heads to Washington in six days.</strong> City leaders, including Councilman Melton, are traveling to DC the week of March 15&ndash;19 to meet with federal officials about the facility. At the same time, the AG Mayes February 17 deadline for a DHS response has passed with no reply, which strengthens the legal case and the moral argument for the city's position.</p>
+        <p style="background:#f0f7ff;border-left:4px solid var(--primary);padding:1rem;border-radius:4px;margin-bottom:1rem;"><strong>The Surprise City Council is traveling to Washington, D.C. the week of March 15&ndash;19.</strong> The AG Mayes February 17 deadline for a DHS response passed with no reply, strengthening the legal case. DHS has still provided no formal written answers to the city.</p>
         <ul>
-          <li>&#x2708;&#xFE0F; Council delegation departs for Washington March 15 with no confirmed DHS meetings as of this update</li>
+          <li>&#x2708;&#xFE0F; Council delegation departed for Washington March 15; no confirmed DHS meetings had been announced as of departure</li>
           <li>&#x23F0; AG Mayes set a February 17 deadline for DHS to respond to her demands. That deadline passed with no response from DHS.</li>
           <li>&#x1F4CB; The city's letter to DHS, addressed to Noem and acting ICE director Todd Lyons, has also received no formal written response</li>
           <li>&#x1F4AC; Councilman Melton: most concerns he's heard center on who will actually be housed at the facility and its proximity to local schools</li>
-          <li>&#x1F4A1; Merrimack's success shows the formula: governor + DC trip + clear demands = cancellation. Surprise needs the same combination with Gosar, AG Mayes, and formal city resolution</li>
-          <li>&#x26A0;&#xFE0F; With Noem out and Mullin not yet confirmed, the city may meet with acting or transitional DHS leadership, which can be used as leverage to delay any construction timeline</li>
+          <li>&#x26A0;&#xFE0F; With Noem out and Mullin not yet confirmed, the city may meet with acting or transitional DHS leadership</li>
         </ul>
         <p class="source-link">Sources: <a href="https://www.azfamily.com/video/2026/02/28/surprise-officials-head-dc-answers-planned-ice-facility/" target="_blank">AZFamily (Feb 27&ndash;28)</a> | <a href="https://www.yourvalley.net/surprise-independent/stories/surprise-council-plans-trip-to-dc-to-get-ice-answers,661099" target="_blank">Surprise Independent</a></p>
       </div>
@@ -787,13 +865,14 @@
       <div class="timeline-item">
         <div class="timeline-marker">1</div>
         <div class="timeline-content">
-          <h4>Contact Council Before the DC Trip: March 15 is 6 Days Away</h4>
-          <p>Merrimack, NH's governor went to Washington, met with DHS, and came home with a cancellation. That is the model. Demand the Surprise City Council arrive with a formal resolution, not just questions, and coordinate with AG Mayes before they go. With Noem out, incoming DHS Secretary Mullin has not staked out a position on this facility. The opening exists now.</p>
+          <h4>Demand a Full Public Debrief on the DC Trip: What Did They Accomplish?</h4>
+          <p>The Council is in Washington March 15&ndash;19. GardaWorld has already been awarded a $313M contract. When the delegation returns, attend the next council meeting and demand a full public account: who did they meet with, what commitments were made, and what is the city's formal position? Merrimack's governor came home with a cancellation. Surprise's council must come home with more than notes.</p>
           <ul>
             <li><strong>Mayor Sartor:</strong> <a href="https://surpriseaz.gov/1177/Contact-the-Mayor" target="_blank">surpriseaz.gov/1177/Contact-the-Mayor</a></li>
             <li><strong>City Council:</strong> <a href="https://surpriseaz.gov/732/City-Council" target="_blank">surpriseaz.gov/732/City-Council</a></li>
-            <li>Ask them to pass a formal resolution before the DC trip on March 15</li>
-            <li>Ask them to coordinate with AG Mayes before they go</li>
+            <li>Demand a formal council resolution opposing the facility</li>
+            <li>Ask them to support AG Mayes's legal challenge and demand the withheld NEPA results</li>
+            <li>Council meets 1st and 3rd Tuesdays at 6 PM</li>
           </ul>
         </div>
       </div>
@@ -801,8 +880,8 @@
       <div class="timeline-item">
         <div class="timeline-marker">2</div>
         <div class="timeline-content">
-          <h4>Support AG Mayes's Legal Challenge</h4>
-          <p>AG Kris Mayes is Arizona's strongest legal voice against this facility. Her public nuisance threat has already extracted documents from DHS. Her February 17 deadline passed with no DHS response, which strengthens her legal position. Let her office know constituents back her action.</p>
+          <h4>Support AG Mayes's Legal Challenge: A Federal Court Just Validated the NEPA Argument</h4>
+          <p>On March 12, a federal judge halted construction of Maryland's identical ICE facility, ruling DHS likely violated the National Environmental Policy Act. AG Mayes has been watching this case. Her public nuisance threat and any NEPA-based legal action now has direct federal court precedent behind it. Let her office know constituents back her pursuing every available legal tool.</p>
           <ul>
             <li><strong>Contact AG Mayes:</strong> <a href="https://www.azag.gov/complaints/consumer" target="_blank">azag.gov &#x2192;</a></li>
             <li>Share updates with <strong>#NoICEinSurprise</strong></li>
@@ -826,7 +905,7 @@
         <div class="timeline-marker">4</div>
         <div class="timeline-content">
           <h4>Contact Senators Kelly and Gallego</h4>
-          <p>Push them to follow up on the withheld NEPA results and press for a congressional hearing before the DC trip.</p>
+          <p>Push them to follow up on the withheld NEPA results, demand answers from GardaWorld on the $313M contract, and press for a congressional hearing on the facility's community impacts.</p>
           <ul>
             <li><strong>Sen. Kelly:</strong> <a href="https://www.kelly.senate.gov/contact/" target="_blank">kelly.senate.gov/contact/</a></li>
             <li><strong>Sen. Gallego:</strong> <a href="https://www.gallego.senate.gov/contact/" target="_blank">gallego.senate.gov/contact/</a></li>
@@ -858,6 +937,40 @@
 <section id="evidence">
   <div class="container">
     <div class="section-title"><h2>What Happens to Communities with ICE Facilities</h2><p>Documented impacts, with sources</p></div>
+
+    <!-- GardaWorld Contract -->
+    <div class="evidence-card danger" style="margin-bottom:1.5rem;">
+      <div class="evidence-header">&#x1F4B0; GardaWorld: $313M to $704M Contract, No Detention Experience, No Competitive Bid (March 2026)</div>
+      <div class="evidence-body">
+        <ul>
+          <li>DHS awarded GardaWorld Federal Services the contract on March 6, 2026; base value $313.4M, with options to $704M through February 2029</li>
+          <li>GardaWorld provides security at Florida's "Alligator Alcatraz" Everglades facility, which has faced ongoing lawsuits, environmental challenges, and documented conditions problems</li>
+          <li>The company has never been directly contracted to design, build, or operate a detention facility; it has no prior detention management experience</li>
+          <li>The contract was awarded through a Department of Defense procurement system, bypassing the standard public competitive bidding process</li>
+          <li>Reps. Stanton, Ansari, and Grijalva demanded written answers from both DHS and GardaWorld within 15 business days on March 11&ndash;12, including questions on qualifications, accountability, safety standards, and community communication</li>
+          <li>Total taxpayer exposure: $70M purchase + $150M retrofit + $313M&ndash;$704M GardaWorld contract = well over $1 billion</li>
+        </ul>
+        <p style="margin-top:1rem;font-style:italic;color:var(--accent);"><strong>Why this matters for Surprise:</strong> A contractor with no detention experience, awarded a billion-dollar contract without competitive bidding, is being handed responsibility for a facility next to a K-8 school. This is the same company whose Florida facility faces ongoing lawsuits.</p>
+        <p class="source-link">Sources: <a href="https://www.azfamily.com/2026/03/11/federal-government-selects-controversial-company-run-surprise-ice-facility/" target="_blank">AZFamily (March 10&ndash;11)</a> | <a href="https://stanton.house.gov/2026/3/stanton-ansari-grijalva-demand-answers-on-surprise-facility-contract-awards" target="_blank">Rep. Stanton press release (March 12)</a> | <a href="https://www.tucsonsentinel.com/local/report/031226_surprise_ice_warehouse/ice-awards-313-million-contract-turn-surprise-az-warehouse-into-migrant-detention-site/" target="_blank">Tucson Sentinel (March 12)</a></p>
+      </div>
+    </div>
+
+    <!-- Maryland Court Precedent -->
+    <div class="evidence-card success" style="margin-bottom:1.5rem;">
+      <div class="evidence-header">&#x2696;&#xFE0F; Federal Court Victory: Maryland's NEPA Argument Just Won. Arizona Has the Same Case. (March 2026)</div>
+      <div class="evidence-body">
+        <ul>
+          <li>On March 11&ndash;12, a federal judge issued a temporary restraining order halting construction of Maryland's ICE warehouse facility in Williamsport</li>
+          <li>The judge ruled DHS "likely failed to comply" with the National Environmental Policy Act: no environmental review, no public input, no state consultation</li>
+          <li>The Williamsport facility is nearly identical to Surprise in scope: a purchased warehouse being converted to a 1,500-bed ICE detention center</li>
+          <li>AG Mayes had been monitoring the Maryland case; the ruling directly validates the legal arguments available in Arizona</li>
+          <li>The Surprise facility faces the same NEPA vulnerabilities: no environmental review, no community input, and DHS deliberately withheld the environmental survey it already conducted</li>
+          <li>Maryland AG Brown: "Federal immigration authorities are barreling past their legal obligations in an effort to build an immigration detention facility as quickly as they can."</li>
+        </ul>
+        <p style="margin-top:1rem;font-style:italic;color:var(--success);"><strong>The legal path forward:</strong> A NEPA-based lawsuit by AG Mayes would cite the same violations the Maryland court just found credible enough to halt construction. The precedent is now on the books.</p>
+        <p class="source-link">Sources: <a href="https://www.washingtonpost.com/immigration/2026/03/11/ice-warehouse-detention-center-lawsuit/" target="_blank">Washington Post (March 11)</a> | <a href="https://thedailyrecord.com/2026/03/12/federal-judge-halts-ice-detention-center-maryland/" target="_blank">Maryland Daily Record (March 12)</a></p>
+      </div>
+    </div>
 
     <!-- ICE Reengineering Initiative -->
     <div class="evidence-card" style="margin-bottom:1.5rem;">
@@ -1013,12 +1126,12 @@
         <h4>&#x1F3DB;&#xFE0F; City of Surprise</h4>
         <div class="contact-item">
           <div class="name">Mayor Kevin Sartor</div>
-          <div class="role">Demand formal opposition resolution before DC trip (March 15&ndash;19)</div>
+          <div class="role">Demand a full public debrief on DC trip; push for formal opposition resolution</div>
           <a href="https://surpriseaz.gov/1177/Contact-the-Mayor" target="_blank">Contact Form &#x2192;</a>
         </div>
         <div class="contact-item">
           <div class="name">City Council</div>
-          <div class="role">Push for formal resolution &amp; coordination with AG Mayes</div>
+          <div class="role">Demand formal resolution, NEPA results, and coordination with AG Mayes</div>
           <a href="https://surpriseaz.gov/732/City-Council" target="_blank">Council Info &#x2192;</a>
         </div>
       </div>
@@ -1070,22 +1183,21 @@
     <div class="section-title"><h2>Letter Template</h2><p>Send to Mayor Sartor and City Council, updated with the latest developments</p></div>
     <div class="letter-wrap">
       <div class="letter-template">
-        <h4>Subject: Demand Formal Opposition Resolution Before the DC Trip: New DHS Leadership Is Your Opening</h4>
+        <h4>Subject: Demand a Full Public Debrief on the DC Trip and a Formal Resolution Against the ICE Facility</h4>
         <p>Mayor Sartor and Surprise City Council,</p>
-        <p>Thank you for sending a letter to DHS and for planning the Washington D.C. trip on March 15&ndash;19. Over 1,000 of us showed up on February 3rd, and hundreds more on February 18th, because we believe our voices matter. But letters and trips are not enough.</p>
-        <p>In February, the governor of New Hampshire traveled to Washington, met directly with DHS Secretary Noem, and came home with a facility cancellation. Merrimack, NH had a proposed 400&ndash;600 bed warehouse facility, similar in scale to what is planned here. She went with a clear mandate. The facility was cancelled.</p>
-        <p>Now DHS Secretary Noem has been fired. The incoming Secretary, Sen. Markwayne Mullin, takes over March 31, after your trip. He has not staked out a position on the Surprise facility. This is a window.</p>
-        <p>New documents obtained by KJZZ reveal the "Surprise Processing Site" could house up to 10,000 detainees for months at a time. The NEPA environmental survey results were deliberately withheld. AG Mayes's February 17 deadline passed with no DHS response. A Dysart High student has already launched a 1,000-signature petition.</p>
-        <p>Before you travel to Washington, I am calling on you to:</p>
+        <p>Thank you for traveling to Washington, D.C. the week of March 15&ndash;19. Over 1,000 of us showed up on February 3rd, and hundreds more at subsequent meetings, because we believe our voices matter. The community deserves a full public account of what happened on that trip.</p>
+        <p>While the delegation was in Washington, significant developments continued here at home. On March 6, DHS awarded a $313 million contract to GardaWorld Federal Services, the same company operating the controversial "Alligator Alcatraz" facility in Florida. GardaWorld has never operated a detention facility and bypassed the standard competitive bidding process. On March 12, a federal judge halted construction of Maryland's nearly identical ICE warehouse facility, ruling DHS had likely violated the National Environmental Policy Act by proceeding without an environmental review or public comment. The same legal vulnerabilities exist in Surprise.</p>
+        <p>Coming out of the DC trip, I am calling on you to:</p>
         <ol>
+          <li><strong>Provide a full public debrief</strong> on who was met with in Washington, what commitments were made, and what the city's formal position is going forward</li>
           <li><strong>Pass a formal resolution opposing this facility</strong>, as Hanover County, VA and Pima County did, which led directly to results</li>
           <li><strong>Demand the withheld NEPA environmental survey results</strong> be released before any construction begins</li>
-          <li><strong>Coordinate with Attorney General Mayes</strong> and support her public nuisance legal challenge</li>
-          <li><strong>Require independent city verification</strong> of DHS claims about water, power, and safety, not just their own documents</li>
-          <li><strong>Refuse city cooperation on permits and services</strong> until full transparency is provided</li>
+          <li><strong>Support Attorney General Mayes's legal challenge</strong>, which now has direct federal court precedent from the Maryland ruling behind it</li>
+          <li><strong>Demand answers from GardaWorld</strong> on qualifications, safety standards, and how it plans to communicate with the community</li>
+          <li><strong>Require independent city verification</strong> of DHS claims about water, power, and safety</li>
         </ol>
-        <p>Rep. Gosar, a Republican, called DHS's process "crappy." Merrimack proved the playbook works. Go to DC with a mandate, not just questions.</p>
-        <p><strong>Pass the resolution. Demand the NEPA results. Support AG Mayes. We will keep showing up.</strong></p>
+        <p>Rep. Gosar, a Republican, called DHS's process "crappy." A federal judge just agreed. Merrimack, NH proved that organized community pressure works. We will keep showing up.</p>
+        <p><strong>Pass the resolution. Demand the NEPA results. Support AG Mayes. Tell us what happened in Washington.</strong></p>
         <p>Sincerely,<br><em>[Your name, address, phone, email]</em></p>
         <button class="copy-btn" onclick="copyLetter()">&#x1F4CB; Copy Letter to Clipboard</button>
       </div>
@@ -1155,34 +1267,63 @@
     <div class="source-list">
 
       <div class="source-category">
-        <h3>&#x1F195; March 5&ndash;9, 2026: Latest</h3>
+        <h3>&#x1F195; March 10&ndash;18, 2026: Latest</h3>
         <div class="source-item">
-          <div class="source-title">Student leader raises concerns over planned ICE facility near Dysart schools <span class="new-badge">NEW</span></div>
+          <div class="source-title">Some Surprise residents continue to rally against proposed ICE facility <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">AZFamily, March 13&ndash;14, 2026</div>
+          <a href="https://www.azfamily.com/2026/03/14/some-surprise-residents-continue-rally-against-proposed-ice-facility/" target="_blank">Read Article &#x2192;</a>
+        </div>
+        <div class="source-item">
+          <div class="source-title">Federal judge halts construction of ICE detention center in Maryland; cites NEPA violations <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">Washington Post / Maryland Daily Record, March 11&ndash;12, 2026</div>
+          <a href="https://www.washingtonpost.com/immigration/2026/03/11/ice-warehouse-detention-center-lawsuit/" target="_blank">Read Article &#x2192;</a>
+        </div>
+        <div class="source-item">
+          <div class="source-title">Arizona Democrats raise concern about oversight of Surprise ICE facility; send letters to DHS and GardaWorld <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">AZFamily / Rep. Stanton press release, March 11&ndash;12, 2026</div>
+          <a href="https://www.azfamily.com/2026/03/12/arizona-democrats-raise-concern-about-oversight-surprise-ice-facility/" target="_blank">Read Article &#x2192;</a>
+        </div>
+        <div class="source-item">
+          <div class="source-title">Federal government selects controversial company to run Surprise ICE facility: GardaWorld awarded $313M contract <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">AZFamily, March 10&ndash;11, 2026</div>
+          <a href="https://www.azfamily.com/2026/03/11/federal-government-selects-controversial-company-run-surprise-ice-facility/" target="_blank">Read Article &#x2192;</a>
+        </div>
+        <div class="source-item">
+          <div class="source-title">"Arizona Alcatraz" sparks controversy: what we know about the ICE facility in Surprise <span class="new-badge">NEW</span></div>
+          <div class="source-outlet">Deseret News, March 15, 2026</div>
+          <a href="https://www.deseret.com/politics/2026/03/15/arizona-alcatraz-what-we-know-about-the-ice-facility-in-surprise/" target="_blank">Read Article &#x2192;</a>
+        </div>
+      </div>
+
+      <div class="source-category">
+        <h3>March 5&ndash;9, 2026</h3>
+        <div class="source-item">
+          <div class="source-title">Student leader raises concerns over planned ICE facility near Dysart schools</div>
           <div class="source-outlet">AZFamily, March 7&ndash;8, 2026</div>
           <a href="https://www.azfamily.com/2026/03/08/student-leader-raises-concerns-over-planned-ice-facility-near-dysart-schools/" target="_blank">Read Article &#x2192;</a>
         </div>
         <div class="source-item">
-          <div class="source-title">Trump fires DHS Secretary Kristi Noem; names Sen. Markwayne Mullin as replacement <span class="new-badge">NEW</span></div>
+          <div class="source-title">Trump fires DHS Secretary Kristi Noem; names Sen. Markwayne Mullin as replacement</div>
           <div class="source-outlet">NPR / CBS News / ABC News, March 5, 2026</div>
           <a href="https://www.npr.org/2026/03/05/nx-s1-5667546/kristi-noem-homeland-security-fired" target="_blank">Read Article &#x2192;</a>
         </div>
         <div class="source-item">
-          <div class="source-title">ICE freezes Newport, Oregon detention center plans <span class="new-badge">NEW</span></div>
+          <div class="source-title">ICE freezes Newport, Oregon detention center plans</div>
           <div class="source-outlet">OPB (Oregon Public Broadcasting), March 5, 2026</div>
           <a href="https://www.opb.org/article/2026/03/04/ice-freezes-newport-detention-center-plans/" target="_blank">Read Article &#x2192;</a>
         </div>
         <div class="source-item">
-          <div class="source-title">ICE taking steps to close Camp East Montana, its largest detention facility <span class="new-badge">NEW</span></div>
+          <div class="source-title">ICE taking steps to close Camp East Montana, its largest detention facility</div>
           <div class="source-outlet">Washington Post, March 4, 2026</div>
           <a href="https://www.washingtonpost.com/immigration/2026/03/04/trump-administration-closes-fort-bliss-detention-center/" target="_blank">Read Article &#x2192;</a>
         </div>
         <div class="source-item">
-          <div class="source-title">ICE's detention expansion faces local resistance nationwide: Mississippi, Tennessee, NH cancelled <span class="new-badge">NEW</span></div>
+          <div class="source-title">ICE's detention expansion faces local resistance nationwide: Mississippi, Tennessee, NH cancelled</div>
           <div class="source-outlet">Governing.com / PBS NewsHour, March 2026</div>
           <a href="https://www.governing.com/management-and-administration/ices-detention-expansion-faces-local-resistance-nationwide" target="_blank">Read Article &#x2192;</a>
         </div>
         <div class="source-item">
-          <div class="source-title">Attempted suicides, fights, pain: 911 calls reveal misery at ICE's largest detention facility <span class="new-badge">NEW</span></div>
+          <div class="source-title">Attempted suicides, fights, pain: 911 calls reveal misery at ICE's largest detention facility</div>
           <div class="source-outlet">Associated Press / Boston Globe, March 6, 2026</div>
           <a href="https://www.bostonglobe.com/2026/03/06/nation/ice-detention-facility-conditions/" target="_blank">Read Article &#x2192;</a>
         </div>
@@ -1191,12 +1332,12 @@
       <div class="source-category">
         <h3>&#x1F195; February 24&ndash;28, 2026</h3>
         <div class="source-item">
-          <div class="source-title">Plans for proposed ICE facility in Merrimack, N.H., won't move forward, governor says <span class="new-badge">NEW</span></div>
+          <div class="source-title">Plans for proposed ICE facility in Merrimack, N.H., won't move forward, governor says</div>
           <div class="source-outlet">Boston Globe / NHPR, February 24, 2026</div>
           <a href="https://www.bostonglobe.com/2026/02/24/metro/merrimack-nh-ice-facility-plans/" target="_blank">Read Article &#x2192;</a>
         </div>
         <div class="source-item">
-          <div class="source-title">Surprise officials head to DC for answers on planned ICE facility <span class="new-badge">NEW</span></div>
+          <div class="source-title">Surprise officials head to DC for answers on planned ICE facility</div>
           <div class="source-outlet">AZFamily, February 27&ndash;28, 2026</div>
           <a href="https://www.azfamily.com/video/2026/02/28/surprise-officials-head-dc-answers-planned-ice-facility/" target="_blank">Read Article &#x2192;</a>
         </div>
@@ -1467,9 +1608,11 @@
         <p>&#x2705; <strong>Feb 24, 2026:</strong> Merrimack, NH facility cancelled after DC trip</p>
         <p>&#x2705; <strong>Feb 25, 2026:</strong> 8,000+ comments filed against</p>
         <p>&#x2705; <strong>Mar 5, 2026:</strong> DHS Secretary Noem fired; Mullin named</p>
-        <p>&#x1F4C5; <strong>March 15&ndash;19:</strong> Council DC Trip: Demand a formal resolution first!</p>
-        <p>&#x1F4C5; <strong>March 31:</strong> Mullin effective as new DHS Secretary</p>
-        <p>&#x1F6A8; <strong>Sept 30, 2026:</strong> DHS target opening, less than 7 months away</p>
+        <p>&#x2705; <strong>Mar 6, 2026:</strong> GardaWorld awarded $313M contract</p>
+        <p>&#x2705; <strong>Mar 12, 2026:</strong> Federal judge halts Maryland ICE facility on NEPA grounds</p>
+        <p>&#x1F4C5; <strong>Mar 15&ndash;19:</strong> Council DC Trip (underway)</p>
+        <p>&#x1F4C5; <strong>Mar 31:</strong> Mullin takes over as DHS Secretary</p>
+        <p>&#x1F6A8; <strong>Sept 30, 2026:</strong> DHS target opening</p>
         <p style="margin-top:0.5rem;font-size:0.82rem;opacity:0.7;">Council meets 1st &amp; 3rd Tuesdays at 6 PM</p>
       </div>
       <div class="footer-section">
@@ -1485,8 +1628,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Created by concerned Surprise residents. Last updated: March 9, 2026</p>
-      <p>Merrimack, NH proved the playbook works. The DC trip is 6 days away. We keep going.</p>
+      <p>Created by concerned Surprise residents. Last updated: March 18, 2026</p>
+      <p>GardaWorld is in. A federal court halted Maryland's identical facility. The fight continues.</p>
     </div>
   </div>
 </footer>
@@ -1548,24 +1691,62 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // ---- LIVE COUNTDOWN: days until Sept 30, 2026 opening ----
+  // Using JS so the site doesn't look stale even if a day or two passes without an update
+  var daysEl = document.getElementById('days-until-opening');
+  var labelEl = document.getElementById('days-label');
+  if (daysEl && labelEl) {
+    var target = new Date('2026-09-30T00:00:00');
+    var now = new Date();
+    var diffMs = target - now;
+    if (diffMs > 0) {
+      var diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+      daysEl.textContent = diffDays;
+      labelEl.textContent = 'Days Until Target Opening';
+    } else {
+      daysEl.textContent = 'PAST';
+      labelEl.textContent = 'DHS Target Opening Date';
+    }
+  }
+
+  // ---- DC TRIP DYNAMIC FRAMING ----
+  // March 15-19 trip: auto-updates the alert banner based on real date
+  // so "council is in DC" vs "council just returned" framing stays accurate
+  var alertBanner = document.querySelector('.alert-banner strong');
+  var alertSub = document.querySelector('.alert-banner');
+  if (alertBanner) {
+    var today = new Date();
+    var tripStart = new Date('2026-03-15');
+    var tripEnd = new Date('2026-03-20'); // day after trip ends
+    var mullinDate = new Date('2026-03-31');
+
+    if (today >= tripEnd && today < mullinDate) {
+      // Council has returned, Mullin not yet confirmed
+      alertBanner.textContent = '\u2708\uFE0F COUNCIL RETURNED FROM DC (March 15\u201319): Demand a full public debrief at the next council meeting. GardaWorld\u2019s $313M contract is active. A federal court halted Maryland\u2019s identical facility on NEPA grounds. The legal and political fight continues.';
+    } else if (today >= mullinDate) {
+      // Mullin era
+      alertBanner.textContent = '\u26A0\uFE0F NEW DHS SECRETARY MULLIN NOW IN OFFICE: GardaWorld\u2019s $313M contract is active. A federal court halted Maryland\u2019s identical facility on NEPA grounds. Demand AG Mayes pursue the same legal challenge in Arizona.';
+    }
+    // If still during trip (or before), the hardcoded HTML text stands as-is
+  }
+
 });
 
 // ---- COPY LETTER TO CLIPBOARD ----
 function copyLetter() {
-  var letterText = 'Subject: Demand Formal Opposition Resolution Before DC Trip \u2014 New DHS Leadership Is Your Opening\n\n' +
+  var letterText = 'Subject: Demand a Full Public Debrief on the DC Trip and a Formal Resolution Against the ICE Facility\n\n' +
     'Mayor Sartor and Surprise City Council,\n\n' +
-    'Thank you for sending a letter to DHS and for planning the Washington D.C. trip on March 15\u201319. Over 1,000 of us showed up on February 3rd, and hundreds more on February 18th, because we believe our voices matter. But letters and trips are not enough.\n\n' +
-    'In February, the governor of New Hampshire traveled to Washington, met directly with DHS Secretary Noem, and came home with a facility cancellation. Merrimack, NH had a proposed 400\u2013600 bed warehouse facility \u2014 similar to what\u2019s planned here. She went with a clear mandate. The facility was cancelled.\n\n' +
-    'Now DHS Secretary Noem has been fired. The incoming Secretary, Sen. Markwayne Mullin, takes over March 31 \u2014 after your trip. He has not staked out a position on the Surprise facility. This is a window.\n\n' +
-    'New documents obtained by KJZZ reveal the \u201cSurprise Processing Site\u201d could house up to 10,000 detainees for months at a time. The NEPA environmental survey results were deliberately withheld. AG Mayes\u2019s February 17 deadline passed with no DHS response. A Dysart High student has already launched a 1,000-signature petition.\n\n' +
-    'Before you travel to Washington, I am calling on you to:\n\n' +
-    '1. Pass a formal resolution opposing this facility \u2014 as Hanover County, VA and Pima County did, which led directly to results\n' +
-    '2. Demand the withheld NEPA environmental survey results be released before any construction begins\n' +
-    '3. Coordinate with Attorney General Mayes and support her public nuisance legal challenge\n' +
-    '4. Require independent city verification of DHS claims about water, power, and safety\n' +
-    '5. Refuse city cooperation on permits and services until full transparency is provided\n\n' +
-    'Rep. Gosar \u2014 a Republican \u2014 called DHS\u2019s process \u201ccrappy.\u201d Merrimack proved the playbook works. Go to DC with a mandate, not just questions.\n\n' +
-    'Pass the resolution. Demand the NEPA results. Support AG Mayes. We will keep showing up.\n\n' +
+    'Thank you for traveling to Washington, D.C. the week of March 15\u201319. Over 1,000 of us showed up on February 3rd, and hundreds more at subsequent meetings, because we believe our voices matter. The community deserves a full public account of what happened on that trip.\n\n' +
+    'While the delegation was in Washington, significant developments continued here at home. On March 6, DHS awarded a $313 million contract to GardaWorld Federal Services, the same company operating the controversial "Alligator Alcatraz" facility in Florida. GardaWorld has never operated a detention facility and bypassed the standard competitive bidding process. On March 12, a federal judge halted construction of Maryland\'s nearly identical ICE warehouse facility, ruling DHS had likely violated the National Environmental Policy Act by proceeding without an environmental review or public comment. The same legal vulnerabilities exist in Surprise.\n\n' +
+    'Coming out of the DC trip, I am calling on you to:\n\n' +
+    '1. Provide a full public debrief on who was met with in Washington, what commitments were made, and what the city\'s formal position is going forward\n' +
+    '2. Pass a formal resolution opposing this facility, as Hanover County, VA and Pima County did, which led directly to results\n' +
+    '3. Demand the withheld NEPA environmental survey results be released before any construction begins\n' +
+    '4. Support Attorney General Mayes\'s legal challenge, which now has direct federal court precedent from the Maryland ruling behind it\n' +
+    '5. Demand answers from GardaWorld on qualifications, safety standards, and how it plans to communicate with the community\n' +
+    '6. Require independent city verification of DHS claims about water, power, and safety\n\n' +
+    'Rep. Gosar, a Republican, called DHS\'s process "crappy." A federal judge just agreed. Merrimack, NH proved that organized community pressure works. We will keep showing up.\n\n' +
+    'Pass the resolution. Demand the NEPA results. Support AG Mayes. Tell us what happened in Washington.\n\n' +
     'Sincerely,\n[Your name, address, phone, email]';
 
   var btn = document.querySelector('.copy-btn');
