@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.noiceinsurprise.com/sitemap.xml
+Sitemap: https://noiceinsurprise.com/sitemap.xml
